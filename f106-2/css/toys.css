@@ -1,0 +1,346 @@
+/* Toys */
+
+main {
+    margin-bottom: 55px;
+}
+
+/* Форма */
+.sidebar-wrapper {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #7d97da33;
+}
+.sidebar-wrapper-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.fieldset-sidebar {
+    padding: 0px;
+    margin-top: 40px;
+    margin-bottom: 41px;
+    margin-left: 55px;
+    margin-right: 53px;
+    border: none;
+}
+.fieldset-sidebar-cost{
+    padding: 0px;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    border: none;
+}
+.fieldset-sidebar-name {
+    margin-bottom: 19px;
+}
+.color-list {
+    margin-left: 49px;
+}
+.color-list li {
+    margin-bottom: 14px;
+    margin-left: -20px;
+}
+.color-list li:last-child {
+    margin-bottom: 0px;
+}
+.shiping-list {
+    margin-left: 34px;
+}
+.shiping-list li {
+    margin-bottom: 8px;
+}
+.sidebar-btn-wrapper {
+    margin-top: 79px;
+    margin-right: 85px;
+}
+
+
+
+/* main Заголовки в форме */
+legend {
+    font-weight: bold;
+}
+
+/* main Цифры слова в форме */
+.sidebar-words:hover {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+}
+.button-form {
+    padding: 0px;
+    margin-top: -4px;
+    width: 95px;
+    height: 40px;
+    border: none;
+}
+
+/* чек-бокс шкала */
+.line-wrapper {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+.block-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.scale-circl {
+    position: absolute;
+    top: 2px;
+    right: 170px;
+}
+.scale-circl-img {
+    position: absolute;
+    top: 1px;
+    right: 178px;
+}
+
+/* Чек-бокс Color*/
+.checkbox-label{
+    position: relative;
+    cursor: pointer;
+}
+.checkbox-label::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: -2px;
+    width: 19px;
+    height: 19px;    
+    border: 2px solid #C29974;
+    border-radius: 3px;
+    background-color: transparent;
+}
+.checkbox-label::after {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: -1px;
+    width: 15px;
+    height: 16px;  
+    background-image: url('../img/checkbox/Vector\ 1.svg');
+    opacity: 0;
+    background-repeat: no-repeat;
+}
+.checkbox-input:checked + .checkbox-label::after {
+    opacity: 1;
+}
+.checkbox-input:disabled + .checkbox-label::before {
+    background-image: url('../img/checkbox/Vector\ 1.svg');
+    opacity: 0.5;
+}
+.checkbox-input:disabled + .sidebar-words {
+    color: #908484;
+    cursor: auto;
+    text-decoration-line: none;
+}
+.list-input:focus-within {
+    outline: solid 2px #000;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+}
+.checkbox-input:checked + .checkbox-label {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+}
+.sidebar-words {
+    font-size: 18px;
+    line-height: 25px;
+    
+}
+/* Чек-бокс Delivery */
+.radio-label{
+    position: relative;
+    cursor: pointer;
+}
+.radio-label::before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: -3px;
+    width: 22px;
+    height: 21px;
+    border: 2px solid #C29974;
+    border-radius: 18px;
+    background-color: transparent;
+}
+.radio-label::after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 2px;
+    width: 21px;
+    height: 14px;  
+    background-image: url('../img/checkbox/Ellipse.svg');
+    opacity: 0;
+    background-repeat: no-repeat;
+}
+.radio-input:checked + .radio-label::after {
+    opacity: 1;
+}
+.radio-input:disabled + .radio-label::after {
+    background-image: url('../img/checkbox/Ellipse.svg');
+    opacity: 0.5;
+    cursor: auto;
+    text-decoration-line: none;
+}
+.radio-input:disabled + .sidebar-words {
+    color: #908484;
+    cursor: auto;
+    text-decoration-line: none;
+}
+   
+.radio-input:checked + .radio-label {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+}
+
+/* amount */
+.amount {
+    margin-right: 46px;
+}
+.amount-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.amount-field {
+    margin-top: 40px;
+    border: 0;
+}
+.list-item {
+    width: 80px;
+    margin-top: 10px;
+}
+.amount-label {
+    display: block;
+    padding: 7px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #1E0606;
+    cursor: pointer;
+}
+.amount-label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 80px;
+    background-color: #ffffff;
+    z-index: -2;
+}
+.amount-label:hover::before{
+    background-color: #EDDEEB;
+}
+.amount-label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 80px;
+    background-color: #F3D0DB;
+    opacity: 0;
+    z-index: -1;
+}
+.amount-input:checked + .amount-label::after {
+    opacity: 1;
+}
+.list-item:focus-within {
+    outline: solid 2px #000;
+}
+
+
+
+/* main Секция с Игрушками */
+.items {
+    margin-top: 60px;
+    padding-bottom: 8px;
+}
+.items-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 45px;
+    margin-left: -10px;
+    margin-right: -10px;    
+}
+.items-toys {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.items-description {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #1E0606;
+}
+.items-price {
+    font-weight: bold;
+    color: #1E0606;
+}
+
+li p {
+    text-align: center;
+}
+/* Всплыв при наведении на ITEM */
+
+.item-toys-content{
+    position: relative;
+}
+.subtitle-text {
+    position: absolute;
+    width: 200px;
+    height: 29px;
+    left: 4px;
+    top: 82px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 29px;
+    color: #1E0606;
+    text-shadow: 0px 0px 40px rgb(147 3 3 / 25%);
+    text-transform: uppercase;
+    border: none;
+}
+.subtitle-text:hover {
+    cursor: pointer;
+}
+.item-subtitle{
+    position: absolute;
+    right: 88px;
+    top: 91px;
+    width: 207px;
+    height: 207px;
+    background: #E5EAF8;
+    opacity: 0.9;
+    display: none;
+}
+.item-toys-content:hover .item-subtitle{
+    display: block;
+    cursor: pointer;
+}
+.item-toys-content:active .item-subtitle{
+    display: block;
+    opacity: 0.67;
+}
