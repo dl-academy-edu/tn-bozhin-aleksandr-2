@@ -1,0 +1,83 @@
+<form class="sidebar-wrapper" action="https://echo.htmlacademy.ru" method="post">
+    <div class="sidebar-wrapper-block container">
+        <fieldset class="fieldset-sidebar-cost">
+            <legend class="fieldset-sidebar-name">Cost</legend>
+            <div class="line-wrapper">
+                <div class="scale-line"> <img src="/static/images/Toy/line1.png" alt=""></div>
+                <div class="scale-circl"><img src="/static/images/Toy/circl1.png" alt=""></div>
+                <div class="scale-circl-img"><img src="/static/images/Toy/circl2.png" alt=""></div>
+                <div class="scale-line-2"><img src="/static/images/Toy/line2.png" alt=""></div>
+            </div>
+            <div class="block-wrapper">
+                <div>
+                    <span class="sidebar-words">0</span>
+                </div>
+                <div>
+                    <span class="sidebar-words">500</span>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="fieldset-sidebar">
+            <legend class="fieldset-sidebar-name">Color</legend>
+            <ul class="color-list">
+                <li class="list-input">
+                    <input id="Black-input" type="checkbox" class="checkbox-input visually-hidden" value="Black"
+                        checked>
+                    <label for="Black-input" class="checkbox-label sidebar-words">Black</label>
+                </li>
+                <li class="list-input">
+                    <input id="Blue-input" type="checkbox" class="checkbox-input visually-hidden" value="Blue">
+                    <label for="Blue-input" class="checkbox-label sidebar-words">Blue</label>
+                </li>
+                <li class="list-input">
+                    <input id="Green-input" type="checkbox" class="checkbox-input visually-hidden"
+                        value="Green">
+                    <label for="Green-input" class="checkbox-label sidebar-words">Green</label>
+                </li>
+                <li class="list-input">
+                    <input id="White-input" type="checkbox" class="checkbox-input visually-hidden"
+                        value="White">
+                    <label for="White-input" class="checkbox-label sidebar-words">White</label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset class="fieldset-sidebar">
+            <legend class="fieldset-sidebar-name">Delivery</legend>
+            <ul class="shiping-list">
+                <li class="list-input">
+                    <input id="free-input" type="radio" value="Free" name="report"
+                        class="radio-input visually-hidden" checked>
+                    <label for="free-input" class="radio-label sidebar-words">Free shipping</label>
+                </li>
+                <li class="list-input">
+                    <input id="fast-input" type="radio" value="Fast" name="report"
+                        class="radio-input visually-hidden">
+                    <label for="fast-input" class="radio-label sidebar-words">Fast shipping</label>
+                </li>
+            </ul>
+        </fieldset>
+        <div class="amount">
+            <fieldset class="amount-field">
+                <legend class="filter-title">Amount</legend>
+                <ul class="amount-list">
+                    <li class="list-item">
+                        <input id="0-5-input" type="radio" name="amount" class="amount-input visually-hidden"
+                            checked>
+                        <label for="0-5-input" class="amount-label">0-5</label>
+                    </li>
+                    <li class="list-item">
+                        <input id="10-20-input" type="radio" name="amount" class="amount-input visually-hidden">
+                        <label for="10-20-input" class="amount-label">10-20</label>
+                    </li>
+                    <li class="list-item">
+                        <input id="20-50-input" type="radio" name="amount" class="amount-input visually-hidden">
+                        <label for="20-50-input" class="amount-label">20-50</label>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+        <div class="sidebar-btn-wrapper">
+            <button type="submit" class="button-form btn">apply</button>
+        </div>
+    </div>
+</form>

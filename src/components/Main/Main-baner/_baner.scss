@@ -1,0 +1,108 @@
+.main-banner {
+    margin-bottom: 91px;
+    background-color: #EEE4DB;
+}
+.lead {
+    padding-top: 12px;
+    margin-bottom: 10px;
+    margin-left: 31px;
+    width: 61px;
+    height: 74px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 73px;
+    color: #1e06060d;
+  }
+  /* Линии */
+
+.line {
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #D6CAC2;
+    border: none;
+    cursor: pointer;
+  }
+  .line:hover,
+  .line:active,
+  .line:focus {
+    background-color: #1e060699;
+    cursor: pointer;
+  }
+  .line-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 31px;
+    height: 3px;
+    margin-top: 11px;
+  }
+  /*  */
+.slide-title {
+    width: 307px;
+    text-align: start;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 44px;
+    text-transform: uppercase;
+  }
+  
+  .slide-paragraf {
+    margin-top: 20px;
+    font-family: 'Crimson Text', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    width: 200px;
+  }
+  .line-paragraf {
+    padding-top: 12px;
+    padding-bottom: 11px;
+    margin-top: 89px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #C29974;
+  }
+  .line-list-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: 31px;
+  }
+  
+  .slide-title-wrapper {
+    margin-left: 71px;
+  }
+  .slide-title-wrapper::after { 
+    content: '';
+    position: absolute;
+    display: block;
+    right: 98px;
+    top: -179px;
+    width: 636px;
+    height: 461px;
+    background: url('/static/images/monstr.png') no-repeat;
+    z-index: 0;
+  }
+  
+  .line-monstr-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;  
+  }

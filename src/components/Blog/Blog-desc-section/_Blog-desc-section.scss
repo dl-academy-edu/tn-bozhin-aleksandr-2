@@ -1,0 +1,18 @@
+/* Новости */
+.desc {
+    // margin-right: 10px;
+    // margin-left: 10px;
+    max-width: 380px;
+}
+.blog-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -10px 14px -10px;
+}
+.blog-item{
+    width: 380px;
+    margin: 0 10px 26px 10px;
+}

@@ -1,22 +1,222 @@
-footer {
-  background-color: #ffd042;
-  height: 80px;
+/* footer */
+
+.footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
+  
+}
+.footer-star-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 100px;
+  padding-top: 23px;
+  margin-top: 14px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+  border-top: 1px solid #666666;
+}
+.footer-info-name {
+  padding-bottom: 23px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #AAAAAA;
+  border-bottom: 1px solid #666666;
+}
 
-  span {
-    padding-right: 20px;
-  }
+/* footer заголовки  */
+.footer-title {
+  position: relative;
+  width: 380px;
+  margin-right: 1px;
+}
+.footer-title-wrapper{
+  width: 33%;
+  margin-left: 8px;
+}
 
-  a {
-    color: #000;
-    text-decoration: none;
+/*  */
+ul.items-link {
+  margin-top: 25px;
+  
+}
+div.items-link {
+  margin: 0 1px;
+  width: 34%;
+}
 
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
-  }
+.items-link a,
+.items-link p {
+  font-weight: normal;
+  color: #FFFFFF;
+}
+.items-link a:hover,
+.items-link a:focus {
+  opacity: 0.5;
+}
+.items-link a:active {
+  opacity: 0.2;
+}
+.items-link li {
+  margin: 15px 0px;
+}
+.footer {
+  background-color: #434343;
+}
+.footer-btn {
+  padding: 0px;
+  width: 81px;
+  height: 40px;
+  border: none;
+}
+a.items-link-info {
+  color: #A2A2A2;
+}
+a.items-link-info:hover,
+a.items-link-info:focus {
+  color: #FFFFFF;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.items-link button {
+  background: transparent;
+  border: none;
+}
+.footer-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}
+.email-input-footer {
+  padding: 9px 11px;
+  width: 299px;
+  height: 40px;
+  border: 1px solid transparent;
+  background-color: #666666;
+}
+.email-input-footer::-webkit-input-placeholder,
+.email-input-footer::-moz-placeholder,
+.email-input-footer:-ms-input-placeholder,
+.email-input-footer::-ms-input-placeholder,
+.email-input-footer::placeholder {
+  color: #EBEBEB;
+}
+.email-input-footer:active,
+.email-input-footer:focus,
+.email-input-footer:hover {
+  border: 1px solid #FFFDFD;
+  outline: 0px;
+}
+.line-footer {
+  position: relative;
+}
+
+/* ЗВЕЗДЫ */
+.rating-caption {
+  font-weight: normal;
+  color: #FFFFFF;
+}
+.rating {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.rating-group:focus-within {
+  outline: solid 2px #000;
+}
+.rating-star {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  width: 18px;
+  height: 17px;
+  background-size: 17px auto;
+  font-weight: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.rating-star:focus {
+  outline: none;  
+}
+.rating-star:checked,
+.rating-star:hover {
+  background-image: url('/static/images/star/Star3activ.svg');
+  background-size: 18px auto;
+}
+.rating-star:hover ~ .rating-star {
+  background-image: url('/static/images/star/Star.svg');
+  background-size: 18px auto;
+}
+.rating-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -18px;
+  right: -153px;
+  width: 90px;
+  height: 17px;
+  background-image: url('/static/images/star/Star.svg');
+  background-size: 18px auto;
+}
+.rating-star:nth-of-type(1) {
+  z-index: 5;
+  width: 18px;
+}
+.rating-star:nth-of-type(2) {
+  z-index: 4;
+  width: 36px;
+}
+.rating-star:nth-of-type(3) {
+  z-index: 3;
+  width: 54px;
+}
+.rating-star:nth-of-type(4) {
+  z-index: 2;
+  width: 72px;
+}
+.rating-star:nth-of-type(5) {
+  z-index: 1;
+  width: 90px;
+}
+/* Социальные сети */
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}
+.social-link {
+  margin-left: 10px;
+}
+.social-link:first-child {
+  margin-left: 0px;
+}
+.social-link:hover,
+.social-link:focus {
+  opacity: 0.5;
+}
+.social-link:active {
+  opacity: 0.2;
 }

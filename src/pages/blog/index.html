@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link href="/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <title>Blog</title>
+  </head>
+  <body>
+    <header class="header container">
+      @@include('header/index.html')
+      <a href="/pages/contactus/index.html" class="contact-us">Contact us</a>
+    </header>
+    <main class="main container">
+      @@include('Blog/index.html')
+    </main>
+    @@include('footer/index.html')
+  </body>
+</html>

@@ -1,24 +1,95 @@
-header {
-  background-color: #89f7fe;
-  height: 80px;
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-logo {
+  height: 52px;
+  width: 100px;
+}
+.header-logo:hover,
+.header-logo:focus {
+  opacity: 0.5;
+}
+.header-logo:active {
+  opacity: 0.2;
+}
+.nav-item {
+  color: #1E0606;
+}
+.nav-item:hover,
+.nav-item:focus {
+  opacity: 0.5;
+}
+.nav-item:active {
+  opacity: 0.2;
+}
 
-  span {
-    padding-right: 20px;
-  }
 
-  a {
-    color: #000;
-    text-decoration: none;
+/* Навигация */
 
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
-  }
+.menu-nav {
+  margin-left: 60px;
+  margin-right: auto;
+}
+.menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.menu-item {
+  margin-right: 20px;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+.menu-item:last-child {
+  margin-right: 0px;
+}
+
+
+
+/* Поиск, Контакт ас Main*/
+
+.header-search {
+  margin-right: 18px;
+}
+.header-search:hover,
+.header-search:focus  {
+  opacity: 0.5;
+}
+.header-search:active {
+  opacity: 0.2;
+}
+.contact-us {
+  margin-right: -4px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #1E0606;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+.contact-us:hover,
+.contact-us:focus  {
+  opacity: 0.5;
+}
+.contact-us:active {
+  opacity: 0.2;
 }
 
 

@@ -1,0 +1,30 @@
+/* main Время Новости */
+.p-time {
+    margin-top: 15px;
+    margin-bottom: 9px;
+    color: #818181;
+    mix-blend-mode: normal;
+    text-align: start;
+}
+/* main  Заголовки Новостей */
+.desc-title {
+    margin-bottom: 18px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: #1E0606;
+}
+.desc-title:hover,
+.desc-title:active,
+.desc-title:focus {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+}
+/* main Описание Новостей */
+.desc-text {
+    font-size: 18px;
+    line-height: 25px;
+    color: #1E0606;
+    text-align: start;
+}

@@ -1,0 +1,44 @@
+
+/* Имя страниц и стрелка . Путь перехода*/
+
+.breadcrumbs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 17px;
+    margin-bottom: 50px;
+}
+.main-heading {
+    position: relative;
+    margin-right: 48px;
+    font-family: 'Crimson Text', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1E0606;
+}
+.main-heading::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -29px;
+    width: 8px;
+    height: 12px;
+    background-image: url('/static/images/arrows/arrows-catalog.png');
+    background-repeat: no-repeat;
+}
+.main-heading-transparent{
+    font-family: 'Crimson Text', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: capitalize;
+    color: #1E0606;
+    opacity: 0.5;
+}

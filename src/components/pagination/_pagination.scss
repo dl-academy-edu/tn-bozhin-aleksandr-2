@@ -1,0 +1,113 @@
+/* Карусель 2 страниц: Toys и Blog */
+.pagination {
+    margin-top: 10px;
+    margin-bottom: 55px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.button-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.btn-pagination-number {
+    margin-right: 64px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.btn-pagination-number:hover,
+.btn-pagination-number:focus {
+    opacity: 0.5;
+}
+.btn-pagination-number:active {
+    color: #C29974;
+}
+.btn-pagination-list {
+    margin-right: 64px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #1E0606;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.btn-pagination-list:hover,
+.btn-pagination-list:focus {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.btn-pagination-list:active {
+    color: #C29974;
+}
+/* карусель стрелки */
+.arrow-pagination {
+    width: 32px;
+    height: 40px;
+    background: none;
+    background-image: url('/static/images/arrows/arrowright.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+.arrow-pagination:hover,
+.arrow-pagination:focus {
+    background-image: url('/static/images/arrows/arrowright\ 2.png');
+}
+.arrow-pagination:active {
+    background-image: url('/static/images/arrows/arrowright\ 2.png');
+    opacity: .5;
+}
+.arrow-pagination-left {
+    background-image: url('/static/images/arrows/arrowright.png');
+    -webkit-transform: rotate( 180deg);
+        -ms-transform: rotate( 180deg);
+            transform: rotate( 180deg);
+    background-repeat: no-repeat;
+
+}
+/* Разное */
+.btn {
+    text-align: center;
+    padding: 9px 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #000000;
+    border: none;
+}
+.btn:hover,
+.btn:focus  {
+    background-color:#C29974;
+}
+.btn:active {
+    background-color:#CFAF91;
+}
+.btn:disabled {
+    color: #E1E1E1;
+    background-color:#C1C1C1;
+    cursor: auto;
+}

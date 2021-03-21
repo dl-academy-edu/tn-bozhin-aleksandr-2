@@ -1,0 +1,38 @@
+<section class="popup-contact container">
+    <h2 class="visually-hidden">popup-contact</h2>
+    <button type="button" class="popup-contact-btn"></button>
+    <div class="form-wrapper">
+        <form action="https://echo.htmlacademy.ru" method="post" class="contact-form">
+            <div class="form-name-wrapper">
+                <label for="name-input" class="lable-name">Name</label>
+                <input id="name-input" type="text" class="form-input input-name" required>
+            </div>
+            <div class="form-block-wrapper">
+                <div class="form-phone-wrapper">
+                    <label for="Phone-input" class="lable-phone">Phone</label>
+                    <input id="Phone-input" type="text" class="form-input" required>
+                </div>
+                <div class="form-email-wrapper">
+                    <label for="email-input" class="lable-email">Email</label>
+                    <input id="email-input" type="email" class="form-input" required>
+                </div>
+            </div>
+            <div class="form-message-wrapper">
+                <label for="message-input" class="lable-message">Message</label>
+                <textarea id="message-input" class="form-input input-message" rows="5"></textarea>
+            </div>
+            <fieldset class="checkbox-wrapper">
+                <input id="check-click" class="visually-hidden checkbox-input" type="checkbox" disabled>
+                <label for="check-click" class="checkbox-label input-checkbox"> By clicking on the
+                    button, you consent
+                    to the processing
+                    of your personal data
+                </label>
+            </fieldset>
+            <div class="from-button">
+                <button type="submit" class="btn" disabled>Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+<div class="popup-overlay"></div>

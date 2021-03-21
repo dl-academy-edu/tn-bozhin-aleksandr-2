@@ -1,0 +1,75 @@
+/* main Секция с Игрушками */
+.items {
+    margin-top: 60px;
+    padding-bottom: 8px;
+}
+.items-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 45px;
+    margin-left: -10px;
+    margin-right: -10px;    
+}
+.items-toys {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.items-description {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #1E0606;
+}
+.items-price {
+    font-weight: bold;
+    color: #1E0606;
+}
+li p {
+    text-align: center;
+}
+/* Всплыв при наведении на ITEM */
+.item-toys-content{
+    position: relative;
+}
+.subtitle-text {
+    position: absolute;
+    width: 200px;
+    height: 29px;
+    left: 4px;
+    top: 82px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 29px;
+    color: #1E0606;
+    text-shadow: 0px 0px 40px;
+    text-transform: uppercase;
+    border: none;
+}
+.subtitle-text:hover {
+    cursor: pointer;
+}
+.item-subtitle{
+    position: absolute;
+    right: 88px;
+    top: 91px;
+    width: 207px;
+    height: 207px;
+    background: #E5EAF8;
+    opacity: 0.9;
+    display: none;
+}
+.item-toys-content:hover .item-subtitle{
+    display: block;
+    cursor: pointer;
+}
+.item-toys-content:active .item-subtitle{
+    display: block;
+    opacity: 0.67;
+}
