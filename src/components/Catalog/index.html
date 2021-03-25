@@ -2,8 +2,12 @@
 @@include('subtitle/index.html',{
     "title":"Catalog"
   })
-@@include('breadcrumbsAll/index.html',{
-    "page":"Catalog"
-  })
-@@include('Catalog/category-list/index.html')
-@@include('Catalog/category-preview/index.html')
+  <section class="breadcrumbs">
+    <a href="/index.html">
+        <h3 class="main-heading">Home</h3>
+    </a>
+    <span class="main-heading-transparent">Catalog
+    </span>
+    </section>
+@@include('catalog/category-list/index.html')
+@@include('catalog/category-preview/index.html')

@@ -4,13 +4,9 @@
     padding-bottom: 8px;
 }
 .items-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: row;
     margin-bottom: 45px;
     margin-left: -10px;
     margin-right: -10px;    

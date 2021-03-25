@@ -1,0 +1,44 @@
+/* Продукты-Картинки */
+.list-item-1 {
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #DBE4DB;
+  }
+  .item-1-text {
+    position: absolute;
+    display: inline-block;
+    top: 113px;
+    right: 76px;
+    width: 129px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .item-2-text {
+    position: absolute;
+    display: inline-block;
+    top: 113px;
+    right: 75px;
+    width: 154px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .item-1-text:hover {
+    text-decoration-line: underline;
+    text-shadow: 0px 0px 40px #93030340;
+  }
+  .item-2-text:hover {
+    text-decoration-line: underline;
+    text-shadow: 0px 0px 40px #93030340;
+  }

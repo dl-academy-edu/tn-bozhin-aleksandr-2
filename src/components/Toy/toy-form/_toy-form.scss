@@ -5,16 +5,9 @@
     background-color: #7d97da33;
 }
 .sidebar-wrapper-block {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .fieldset-sidebar {
     padding: 0px;
@@ -63,8 +56,7 @@ legend {
 
 /* main Цифры слова в форме */
 .sidebar-words:hover {
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
 }
 .button-form {
     padding: 0px;
@@ -77,17 +69,11 @@ legend {
 /* чек-бокс шкала */
 .line-wrapper {
     position: relative;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .block-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
 }
 .scale-circl {
     position: absolute;
@@ -141,12 +127,10 @@ legend {
 }
 .list-input:focus-within {
     outline: solid 2px #000;
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
 }
 .checkbox-input:checked + .checkbox-label {
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
 }
 .sidebar-words {
     font-size: 18px;
@@ -196,8 +180,7 @@ legend {
 }
    
 .radio-input:checked + .radio-label {
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
 }
 
 /* amount */
@@ -205,8 +188,6 @@ legend {
     margin-right: 46px;
 }
 .amount-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 .amount-field {

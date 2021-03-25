@@ -44,8 +44,6 @@
     margin-bottom: 60px;
 }
 .form-section-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 .contact-form {
@@ -53,26 +51,15 @@
     background-color: #E5EAF8;
 }
 .form-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
 }
 .form-block-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 .form-name-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 .lable-name {
     margin-bottom: 3px;
@@ -82,13 +69,8 @@
     cursor: pointer;
 }
 .form-phone-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin-right: 20px;
 }
 .lable-phone {
@@ -114,13 +96,8 @@
     width: 600px;
 }
 .form-email-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 .lable-email {
     margin-bottom: 3px;
@@ -131,13 +108,8 @@
     cursor: pointer;
 }
 .form-message-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 .lable-message {
     margin-bottom: 3px;
@@ -156,8 +128,6 @@
     height: 150px;
 }
 .checkbox-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding-left: 0px;
     margin-top: 20px;

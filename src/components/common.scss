@@ -1,8 +1,7 @@
  /* Общие стили для всего сайта */
 
  *, *::after, *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 ul, ol {
   list-style: none;
@@ -42,8 +41,7 @@ a {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -52,21 +50,7 @@ a {
   display: block;
   max-width: 100%;
 }
-/* картинки главной и каталога */
-.category-product{
-  font-family: Montserrat, sans-serif;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 32px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-}
-.category-product:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  text-shadow: 0px 0px 40px #93030340;
-}
+
 /* заголовки */
 .caption {
   font-family: Montserrat, sans-serif;
@@ -79,23 +63,22 @@ a {
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";
-@import "./Main/Main-baner/baner";
-@import "./Main/Main-category-product/category-product";
-@import "./Main/Main-information/information";
-@import "./Main/Main-baner/baner";
-@import "./Main/Main-company/company";
-@import "./Main/Main-about/about";
-@import "./Main/Main-popup/popup";
+@import "./main/main-baner/baner";
+@import "./main/main-category-product/category-product";
+@import "./main/main-information/information";
+@import "./main/main-baner/baner";
+@import "./main/main-company/company";
+@import "./main/main-about/about";
+@import "./main/main-popup/popup";
 @import "./btn/btn";
 @import "./subtitle/subtitle";
 @import "./breadcrumbsAll/breadcrumbsAll";
-@import "./breadcrumbsToy/breadcrumbsToy";
-@import "./Blog/Blog-desc-section/Blog-desc-section";
-@import "./Blog/Blog-desc-section/Blog-desc/Blog-desc";
+@import "./blog/blog-desc-section/blog-desc-section";
+@import "./blog/blog-desc-section/blog-desc/blog-desc";
 @import "./pagination/pagination";
-@import "./Catalog/category-list/category-list-item/category-list-item";
-@import "./Catalog/category-list/category-list";
-@import "./Catalog/category-preview/preview";
-@import "./Contactus/contactus-text/contactus-text";
-@import "./Toy/toy-form/toy-form";
-@import "./Toy/toy-items/toy-items";
+@import "./category-list-item/category-list-item";
+@import "./catalog/category-list/category-list";
+@import "./catalog/category-preview/preview";
+@import "./contactus/contactus-text/contactus-text";
+@import "./toy/toy-form/toy-form";
+@import "./toy/toy-items/toy-items";

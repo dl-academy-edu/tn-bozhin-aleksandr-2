@@ -1,30 +1,26 @@
 <ul class="category-list">
-    @@include('Main/Main-category-product/category-product/index.html',{
-        "product-list":"list-item-1",
-        "product-pic":"/static/images/categoryMain/category1.jpg",
-        "product-item-text":"item-1-text",
-        "product-text":"Apparel kids",
-        "product-href":"#"
-    })
-    @@include('Main/Main-category-product/category-product/index.html',{
-        "product-list":"list-item-2",
-        "product-pic":"/static/images/categoryMain/category2.jpg",
-        "product-item-text":"item-2-text",
-        "product-text":"Holiday shop",
-        "product-href":"#"
-    })
-    @@include('Main/Main-category-product/category-product/index.html',{
-        "product-list":"list-item-3",
-        "product-pic":"/static/images/categoryMain/category3.jpg",
-        "product-item-text":"item-3-text",
-        "product-text":"Toys",
-        "product-href":"/pages/toys/index.html"
-    })
-    @@include('Main/Main-category-product/category-product/index.html',{
-        "product-list":"list-item-4",
-        "product-pic":"/static/images/categoryMain/category4.jpg",
-        "product-item-text":"item-4-text",
-        "product-text":"Accessories",
-        "product-href":"#"
-    })
+    @@include('category-list-item/index.html',{
+        "category-pic":"/static/images/Category/category1.jpg",
+        "category-text":"Apparel kids",
+        "href":"#",
+        "item-text":"item-1-text"
+      })
+      @@include('category-list-item/index.html',{
+        "category-pic":"/static/images/Category/category2.jpg",
+        "category-text":"Holiday shop",
+        "href":"#",
+        "item-text":"item-1-text"
+      })
+      @@include('category-list-item/index.html',{
+        "category-pic":"/static/images/Category/category3.jpg",
+        "category-text":"Toys",
+        "href":"/pages/toys/index.html",
+        "item-text":"item-1-text"
+      })
+      @@include('category-list-item/index.html',{
+        "category-pic":"/static/images/Category/category4.jpg",
+        "category-text":"Accessories",
+        "href":"#",
+        "item-text":"item-2-text"
+      })
   </ul>

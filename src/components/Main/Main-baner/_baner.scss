@@ -31,8 +31,6 @@
     cursor: pointer;
   }
   .line-slide {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 31px;
     height: 3px;
@@ -71,13 +69,8 @@
     background-color: #C29974;
   }
   .line-list-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     margin-left: 31px;
   }
   
@@ -98,11 +91,6 @@
   
   .line-monstr-wrapper {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;  
+    flex-direction: row;  
   }

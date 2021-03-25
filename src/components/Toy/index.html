@@ -2,13 +2,19 @@
 @@include('subtitle/index.html',{
     "title":"Toys"
   })
-@@include('breadcrumbsToy/index.html',{
-    "page":"Catalog",
-    "pages":"Toys"
-  })
-  </div>
-@@include('Toy/toy-form/index.html')
-@@include('Toy/toy-items/index.html')
+  <div class="breadcrumbs">
+    <a href="/index.html">
+        <h3 class="main-heading">Home</h3>
+    </a>
+    <a href="/pages/catalog/index.html">
+        <h3 class="main-heading">Catalog</h3>
+    </a>
+    <span class="main-heading-transparent">Toy
+    </span>
+</div>
+</div>
+@@include('toy/toy-form/index.html')
+@@include('toy/toy-items/index.html')
 <section class="pagination container">
 @@include('pagination/index.html')
 </section>

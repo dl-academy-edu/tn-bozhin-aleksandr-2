@@ -1,8 +1,12 @@
 @@include('subtitle/index.html',{
     "title":"Contact Us"
   })
-@@include('breadcrumbsAll/index.html',{
-    "page":"Contact Us"
-  })
-@@include('Contactus/contactus-form/index.html')
-@@include('Contactus/contactus-text/index.html')
+  <section class="breadcrumbs">
+    <a href="/index.html">
+        <h3 class="main-heading">Home</h3>
+    </a>
+    <span class="main-heading-transparent">Contact Us
+    </span>
+    </section>
+@@include('contactus/contactus-form/index.html')
+@@include('contactus/contactus-text/index.html')

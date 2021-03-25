@@ -1,10 +1,14 @@
 @@include('subtitle/index.html',{
     "title":"Blog"
   })
-  @@include('breadcrumbsAll/index.html',{
-    "page":"Blog"
-  })
-  @@include('Blog/Blog-desc-section/index.html')
+  <section class="breadcrumbs">
+    <a href="/index.html">
+        <h3 class="main-heading">Home</h3>
+    </a>
+    <span class="main-heading-transparent">Blog
+    </span>
+    </section>
+  @@include('blog/blog-desc-section/index.html')
   <section class="pagination">
   @@include('pagination/index.html')
   </section>
