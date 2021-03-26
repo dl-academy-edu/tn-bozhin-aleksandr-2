@@ -18,8 +18,7 @@
 .desc-title:hover,
 .desc-title:active,
 .desc-title:focus {
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
 }
 /* main Описание Новостей */
 .desc-text {
@@ -27,4 +26,17 @@
     line-height: 25px;
     color: #1E0606;
     text-align: start;
+}
+/* Новости */
+.desc {
+    max-width: 380px;
+}
+.blog-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 14px -10px;
+}
+.blog-item{
+    width: 380px;
+    margin: 0 10px 26px 10px;
 }

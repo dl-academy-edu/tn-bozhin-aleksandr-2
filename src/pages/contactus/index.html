@@ -19,7 +19,29 @@
       <a href="/pages/contactus/index.html" class="contact-us">Contact us</a>
     </header>
     <main class="main container">
-      @@include('contactus/index.html')
+      @@include('subtitle/index.html',{
+        "title":"Contact Us"
+      })
+      <section class="breadcrumbs">
+        <a href="/index.html">
+            <h3 class="main-heading">Home</h3>
+        </a>
+        <span class="main-heading-transparent">Contact Us
+        </span>
+        </section>
+    @@include('contactus/index.html')
+    <div class="text-wrapper">
+      <p>Our support team are on-hand to assist with any issues you are
+          experiencing.
+      </p>
+      <p class="section-text">Please use the form to contact us with your needs. Send us a
+          message
+          and we'll
+          respond as soon as possible.</p>
+      <p class="form-text">An expert is waiting to help you!</p>
+  </div>
+  </div>
+  </section>
   </main>
     @@include('footer/index.html')
   </body>

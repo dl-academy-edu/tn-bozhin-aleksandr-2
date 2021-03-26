@@ -19,7 +19,20 @@
       <a href="/pages/contactus/index.html" class="contact-us">Contact us</a>
     </header>
     <main class="main container">
-      @@include('blog/index.html')
+      @@include('subtitle/index.html',{
+        "title":"Blog"
+      })
+      <section class="breadcrumbs">
+        <a href="/index.html">
+            <h3 class="main-heading">Home</h3>
+        </a>
+        <span class="main-heading-transparent">Blog
+        </span>
+        </section>
+      @@include('blog/blog-desc-section/index.html')
+      <section class="pagination">
+      @@include('pagination/index.html')
+      </section>
     </main>
     @@include('footer/index.html')
   </body>

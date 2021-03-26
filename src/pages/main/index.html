@@ -18,13 +18,92 @@
   <button type="button" class="contact-us">Contact us</button>
 </header>
   <main class="main">
-    @@include('main/main-baner/index.html')
-    @@include('main/main-category-product/index.html')
-    @@include('main/main-information/index.html')
-    @@include('main/main-company/index.html')
+    <section class="container">
+      <div class="main-banner">
+          <p class="lead"><span>01</span></p>
+          <div class="line-monstr-wrapper">
+              <div class="line-list-wrapper">
+                  <ol class="line-list">
+                      @@include('line-slider/index.html')
+                      @@include('line-slider/index.html')
+                      @@include('line-slider/index.html')
+                      @@include('line-slider/index.html')
+                  </ol>
+              </div>
+              <div class="slide-title-wrapper">
+                  <h1 class="slide-title">The ooh noo collection</h1>
+                  <p class="slide-paragraf">Disigned in Slovenia</p>
+                  <button class="button-slide btn" type="button" aria-label="Explore now">Explore now</button>
+                  </div>
+          </div>
+          <p class="line-paragraf">Free (continental) USA shipping on all orders of $100 USD or more!</p>
+      </div>
+  </section>
+    <section class="category container">
+      <h2 class="category-title caption">Category Products</h2>
+      <ul class="category-list">
+        @@include('category-list-item/index.html',{
+            "category-pic":"/static/images/category/category1.jpg",
+            "category-text":"Apparel kids",
+            "href":"#"
+          })
+          @@include('category-list-item/index.html',{
+            "category-pic":"/static/images/category/category2.jpg",
+            "category-text":"Holiday shop",
+            "href":"#"
+          })
+          @@include('category-list-item/index.html',{
+            "category-pic":"/static/images/category/category3.jpg",
+            "category-text":"Toys",
+            "href":"/pages/toys/index.html"
+          })
+          @@include('category-list-item/index.html',{
+            "category-pic":"/static/images/category/category4.jpg",
+            "category-text":"Accessories",
+            "href":"#"
+          })
+      </ul>
+            <div class="arrows-wrapper">
+              <div>
+                <button class="arrow" type="button" aria-label="arrows slide left">
+                    <img src="/static/images/arrows/arrowleft.png" alt="" class="pictures">
+                </button>
+                <button class="arrow" type="button" aria-label="arrows slide right">
+                    <img src="/static/images/arrows/arrowright1.png" alt="" class="pictures">
+                </button>
+            </div>
+            <div class="category-slide-wrapper">
+                <p>Modern finds for the modern home. Curated goods by unique
+                    designers around the world from fashion to furniture for kids and adults.
+                </p>
+            </div>
+       </div>
+      </section>
+      <section class="information container">
+        <img class="information-pictures pictures" src="/static/images/main-information/history-pictures.jpg" alt="">
+        <div>
+            <h2 class="information-name caption">Delivery</h2>
+            <ul class="information-list">
+                <li class="category-title"> <a href="#" class="title-active title">Delivery</a></li>
+                <li class="category-title"> <a href="#" class="title">Guarantee</a></li>
+                <li class="category-title"> <a href="#" class="title">Credit</a></li>
+            </ul>
+            <p class="information-delivery">Some days i feel like i've been working on dlk my entire life
+                and there are other days that i am completely shocked that four years have flown by. It's simply
+                magical.
+            </p>
+            <p class="information-delivery">What started as an outlet to deal with the traumatic loss of my
+                husband, dlk has now become a truly happy place for me and i have you and all of the beautiful
+                designers that we work with
+                to thank!
+            </p>
+            <a class="btn" href="#">Learn more</a>
+        </div>
+    </section>
+    @@include('company/index.html')
     @@include('main/main-about/index.html')
   </main>
-  @@include('main/main-popup/index.html')
+  @@include('popup/index.html')
   @@include('footer/index.html')
   <script src="scripts.js"></script>
 </body>

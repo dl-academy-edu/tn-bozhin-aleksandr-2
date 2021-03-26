@@ -19,7 +19,71 @@
       <a href="/pages/contactus/index.html" class="contact-us">Contact us</a>
     </header>
     <main class="main container">
-        @@include('catalog/index.html')
+      @@include('subtitle/index.html',{
+        "title":"Catalog"
+      })
+      <section class="breadcrumbs">
+        <a href="/index.html">
+            <h3 class="main-heading">Home</h3>
+        </a>
+        <span class="main-heading-transparent">Catalog
+        </span>
+        </section>
+        <section class="category">
+          <div class="category-wrapper">
+              <ul class="category-list">
+                  @@include('category-list-item/index.html',{
+                      "category-pic":"/static/images/Category/category1.jpg",
+                      "category-text":"Apparel kids",
+                      "href":"#"
+                    })
+                    @@include('category-list-item/index.html',{
+                      "category-pic":"/static/images/Category/category2.jpg",
+                      "category-text":"Holiday shop",
+                      "href":"#"
+                    })
+                    @@include('category-list-item/index.html',{
+                      "category-pic":"/static/images/Category/category3.jpg",
+                      "category-text":"Toys",
+                      "href":"/pages/toys/index.html"
+                    })
+              </ul>
+          </div>
+          <div class="category-wrapper block">
+              <ul class="category-list">
+                  @@include('category-list-item/index.html',{
+                      "category-pic":"/static/images/Category/category4.jpg",
+                      "category-text":"Accessories",
+                      "href":"#"
+                    })
+                    @@include('category-list-item/index.html',{
+                      "category-pic":"/static/images/Category/category5.jpg",
+                      "category-text":"Sale",
+                      "href":"#"
+                    })
+                    @@include('category-list-item/index.html',{
+                      "category-pic":"/static/images/Category/category6.jpg",
+                      "category-text":"Apparel adults",
+                      "href":"#"
+                    })
+              </ul>
+          </div>
+      </section>
+      <section class="preview">
+        <h2 class="categoty-title caption">Product Description</h2>
+        <p class="history-delivery">Interactive doll Zapf Creation Baby Born Sister can drink
+            from a bottle
+            and almost really cry. You can even bathe her, just like a little sister.
+        </p>
+        <p class="history-delivery">A toy with a height of 43 cm bends its knees, the head rotates, it
+            can
+            stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
+        </p>
+        <p class="history-delivery">The set includes a miniature set of fashionable clothes, a
+            hairbrush, a
+            bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the
+            doll, the other for her young mistress.</p>
+    </section>
     </main>
     @@include('footer/index.html')
   </body>

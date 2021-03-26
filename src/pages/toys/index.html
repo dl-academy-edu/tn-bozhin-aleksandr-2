@@ -19,7 +19,29 @@
       <a href="/pages/contactus/index.html" class="contact-us">Contact us</a>
     </header>
     <main class="main">
-      @@include('toy/index.html')
+      <div class="container">
+        @@include('subtitle/index.html',{
+            "title":"Toys"
+          })
+          <div class="breadcrumbs">
+            <a href="/index.html">
+                <h3 class="main-heading">Home</h3>
+            </a>
+            <a href="/pages/catalog/index.html">
+                <h3 class="main-heading">Catalog</h3>
+            </a>
+            <span class="main-heading-transparent">Toy
+            </span>
+        </div>
+        </div>
+        @@include('toy/toy-form/index.html')
+        <section class="items container">
+          <h4 class="visually-hidden">Toys</h4>
+              @@include('toy/items-ul/index.html')
+      </section>
+        <section class="pagination container">
+        @@include('pagination/index.html')
+        </section>
       </main>
     @@include('footer/index.html')
   </body>

@@ -60,25 +60,107 @@ a {
   text-transform: uppercase;
 }
 
+.btn {
+  text-align: center;
+  padding: 9px 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: none;
+}
+.btn:hover,
+.btn:focus  {
+  background-color:#C29974;
+}
+.btn:active {
+  background-color:#CFAF91;
+}
+.btn:disabled {
+  color: #E1E1E1;
+  background-color:#C1C1C1;
+  cursor: auto;
+}
+.button-slide {
+  padding: 0px;
+  margin-top: 20px;
+  width: 161px;
+  height: 40px;
+  border: none;
+}
+// breadcrumbs
+/* Имя страниц и стрелка . Путь перехода*/
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  margin-top: 17px;
+  margin-bottom: 50px;
+}
+.main-heading {
+  position: relative;
+  margin-right: 48px;
+  font-family: 'Crimson Text', sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #1E0606;
+}
+.main-heading::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -29px;
+  width: 8px;
+  height: 12px;
+  background-image: url('/static/images/arrows/arrows-catalog.png');
+  background-repeat: no-repeat;
+}
+.main-heading-transparent{
+  font-family: 'Crimson Text', sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #1E0606;
+  opacity: 0.5;
+}
+/* Текст в Контактасе*/
+.text-wrapper {
+  margin-left: 120px;
+  width: 380px;
+}
+.section-text {
+  margin: 20px 0px;
+}
+.button-form {
+  border: none;
+  width: 106px;
+  height: 40px;
+}
+// Preview
+/* Описание продукта */
+.preview {
+  margin-bottom: 55px;
+  margin-left: 200px;
+  margin-top: 53px;
+  width: 680px;
+}
+.history-delivery {
+  margin-top: 23px;
+  margin-bottom: 15px;
+}
+
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";
-@import "./main/main-baner/baner";
-@import "./main/main-category-product/category-product";
-@import "./main/main-information/information";
-@import "./main/main-baner/baner";
-@import "./main/main-company/company";
-@import "./main/main-about/about";
-@import "./main/main-popup/popup";
-@import "./btn/btn";
+@import "./main/main";
+@import "./popup/popup";
 @import "./subtitle/subtitle";
-@import "./breadcrumbs/breadcrumbs";
-@import "./blog/blog-desc-section/blog-desc-section";
-@import "./blog/blog-desc-section/blog-desc/blog-desc";
+@import "./blog/blog";
 @import "./pagination/pagination";
 @import "./category-list-item/category-list-item";
-@import "./catalog/category-list/category-list";
-@import "./catalog/category-preview/preview";
-@import "./contactus/contactus-text/contactus-text";
-@import "./toy/toy-form/toy-form";
-@import "./toy/toy-items/toy-items";
+@import "./toy/toy";
+@import "./line-slider/line-slider";
