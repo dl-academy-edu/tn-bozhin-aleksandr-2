@@ -1,166 +1,92 @@
- /* Общие стили для всего сайта */
-
- *, *::after, *::before {
-  box-sizing: border-box;
-}
-ul, ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-p, h1, h2, h3, h4 {
-  margin: 0;
-}
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 110px;
-}
-button {
-  cursor: pointer;
-}
- /* Fonts */
- body { 
-  padding-top: 50px;
-  font-family: 'Open Sans', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  color: #1E0606; 
-}
-a {
-  text-decoration: none;
-}
-/* visually-hidden */
+/* General */
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
   overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
 }
-/* картинки */
-.pictures {
-  display: block;
-  max-width: 100%;
+ul {
+  list-style-type: none;
 }
+h1, h2, h3, p, ul, fieldset, button { 
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+a {
+  text-decoration: none;
+}
+.txt {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: #1E0606;
 
-/* заголовки */
-.caption {
-  font-family: Montserrat, sans-serif;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 46px;
+}
+button {
+  cursor: pointer;
+}
+.heading {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 49px;
+  color: #1E0606;
   text-transform: uppercase;
 }
-
-.btn {
-  text-align: center;
-  padding: 9px 22px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #000000;
-  border: none;
+*,
+*::after,
+*::before {
+  box-sizing: border-box; 
 }
-.btn:hover,
-.btn:focus  {
-  background-color:#C29974;
+.container {
+  min-width: 320px;
+  padding: 0 110px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-.btn:active {
-  background-color:#CFAF91;
+fieldset {
+border: 0;
 }
-.btn:disabled {
-  color: #E1E1E1;
-  background-color:#C1C1C1;
-  cursor: auto;
+@media (max-width: 1319px) {
+  .container {
+    padding: 0 60px;
+  }
+  .heading {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
-.button-slide {
-  padding: 0px;
-  margin-top: 20px;
-  width: 161px;
-  height: 40px;
-  border: none;
+@media (max-width: 767px){
+  .container {
+    padding: 0 20px;
+  }
+  .heading {
+    font-size: 24px;
+    line-height: 44px;
+  }
 }
-// breadcrumbs
-/* Имя страниц и стрелка . Путь перехода*/
-
-.breadcrumbs {
-  display: flex;
-  flex-direction: row;
-  margin-top: 17px;
-  margin-bottom: 50px;
-}
-.main-heading {
-  position: relative;
-  margin-right: 48px;
-  font-family: 'Crimson Text', sans-serif;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
-  color: #1E0606;
-}
-.main-heading::before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  right: -29px;
-  width: 8px;
-  height: 12px;
-  background-image: url('/static/images/arrows/arrows-catalog.png');
-  background-repeat: no-repeat;
-}
-.main-heading-transparent{
-  font-family: 'Crimson Text', sans-serif;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
-  text-transform: capitalize;
-  color: #1E0606;
-  opacity: 0.5;
-}
-/* Текст в Контактасе*/
-.text-wrapper {
-  margin-left: 120px;
-  width: 380px;
-}
-.section-text {
-  margin: 20px 0px;
-}
-.button-form {
-  border: none;
-  width: 106px;
-  height: 40px;
-}
-// Preview
-/* Описание продукта */
-.preview {
-  margin-bottom: 55px;
-  margin-left: 200px;
-  margin-top: 53px;
-  width: 680px;
-}
-.history-delivery {
-  margin-top: 23px;
-  margin-bottom: 15px;
-}
-
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";
-@import "./main/main";
+@import "./button/button";
+@import "./link-button/link-button";
 @import "./popup/popup";
-@import "./subtitle/subtitle";
-@import "./blog/blog";
-@import "./pagination/pagination";
-@import "./category-list-item/category-list-item";
-@import "./toy/toy";
-@import "./line-slider/line-slider";
+@import "./sub-heading/sub-heading";
+@import "./catalog-card/catalog-card";
+@import "./control-button/control-button";
+@import "./breadcrumbs/breadcrumbs";
+@import "./stars/stars";
+

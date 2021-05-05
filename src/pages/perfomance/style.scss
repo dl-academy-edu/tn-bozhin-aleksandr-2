@@ -1,0 +1,507 @@
+@keyframes cloud1Motion {
+    87% {
+        left: 99%;
+        opacity: 1;
+    }
+    94% {
+        left: 100%;
+        opacity: 0;
+    }
+    95% {
+        left: -10%;
+        opacity: 0;
+    }
+    99% {
+        left: -2%;
+        opacity: 1;
+    }
+    100% {
+        left: 0%;
+    }
+}
+@keyframes cloud2Motion {
+    67% {
+        left: 99%;
+        opacity: 1;
+    }
+    74% {
+        left: 100%;
+        opacity: 0;
+    }
+    75% {
+        left: -10%;
+        opacity: 0;
+    }
+    82% {
+        left: 8%;
+        opacity: 1;
+    }
+    100% {
+        left: 15%;
+    }
+}
+@keyframes cloud3Motion {
+    49% {
+        left: 99%;
+        opacity: 1;
+    }
+    56% {
+        left: 100%;
+        opacity: 0;
+    }
+    57% {
+        left: -5%;
+        opacity: 0;
+    }
+    64% {
+        left: 10%;
+        opacity: 1;
+    }
+    100% {
+        left: 35%;
+    }
+}
+@keyframes cloud4Motion {
+    41% {
+        left: 99%;
+        opacity: 1;
+    }
+    48% {
+        left: 100%;
+        opacity: 0;
+    }
+    49% {
+        left: -5%;
+        opacity: 0;
+    }
+    56% {
+        left: 10%;
+        opacity: 1;
+    }
+    100% {
+        left: 45%;
+    }
+}
+@keyframes cloud5Motion {
+    20% {
+        left: 99%;
+        opacity: 1;
+    }
+    27% {
+        left: 100%;
+        opacity: 0;
+    }
+    28% {
+        left: -5%;
+        opacity: 0;
+    }
+    35% {
+        left: 10%;
+        opacity: 1;
+    }
+    100% {
+        left: 70%;
+    }
+}
+@keyframes cloud6Motion {
+    3% {
+        left: 99%;
+        opacity: 1;
+    }
+    10% {
+        left: 100%;
+        opacity: 0;
+    }
+    11% {
+        left: -5%;
+        opacity: 0;
+    }
+    18% {
+        left: 10%;
+        opacity: 1;
+    }
+    100% {
+        left: 95%;
+    }
+}
+
+@keyframes carOneMotion {
+    78% {
+        left: 99%;
+        opacity: 1;
+    }
+    85% {
+        left: 100%;
+        opacity: 0;
+    }
+    86% {
+        left: -20%;
+        opacity: 0;
+    }
+    87% {
+        left: -19%;
+        opacity: 1;
+    }
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+@keyframes carTwoMotion {
+    70% {
+        left: 99%;
+        opacity: 1;
+    }
+    77% {
+        left: 100%;
+        opacity: 0;
+    }
+    78% {
+        left: -10%;
+        opacity: 0;
+    }
+    79% {
+        left: -9%;
+        opacity: 1;
+    }
+    100% {
+        left: 25%;
+        opacity: 1;
+    }
+}
+@keyframes carThreeMotion {
+    48% {
+        left: 99%;
+        opacity: 1;
+    }
+    55% {
+        left: 100%;
+        opacity: 0;
+    }
+    56% {
+        left: -10%;
+        opacity: 0;
+    }
+    57% {
+        left: -9%;
+        opacity: 1;
+    }
+    100% {
+        left: 46%;
+        opacity: 1;
+    }
+}
+@keyframes carFourMotion {
+    8% {
+        left: 99%;
+        opacity: 1;
+    }
+    15% {
+        left: 100%;
+        opacity: 0;
+    }
+    16% {
+        left: -15%;
+        opacity: 0;
+    }
+    17% {
+        left: -14%;
+        opacity: 1;
+    }
+    100% {
+        left: 80%;
+        opacity: 1;
+    }
+}
+
+.main {
+    margin-top: 57px;
+    margin-bottom: 70px;
+    @media (max-width: 1024px) {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+    @media (max-width: 768px) {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}
+.animation {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    &__sky {
+        position: relative;
+        width: 100%;
+        min-height: 71px;
+        margin-bottom: 3px;
+    }
+    &__cloud-wrapper {
+        position: absolute;
+        width: 100%;
+        &_one {
+            width: 10%;
+            height: auto;
+            left: 0%;
+            top: 10%;
+            animation: cloud1Motion 120s linear infinite;
+        }
+        &_two {
+            width: 18%;
+            height: auto;
+            left: 15%;
+            top: 46px;
+            animation: cloud2Motion 120s linear infinite;
+        }
+        &_three {
+            width: 15%;
+            height: auto;
+            left: 35%;
+            top: 10%;
+            animation: cloud3Motion 120s linear infinite;
+        }
+        &_four {
+            width: 19%;
+            height: auto;
+            left: 45%;
+            top: 80%;
+            animation: cloud4Motion 120s linear infinite;
+        }
+        &_five {
+            width: 10%;
+            height: auto;
+            left: 70%;
+            top: 46%;
+            animation: cloud5Motion 120s linear infinite;
+        }
+        &_six {
+            width: 16%;
+            height: auto;
+            left: 95%;
+            top: 40%;
+            animation: cloud6Motion 120s linear infinite;
+        }
+    }
+    &__cloud-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__sun-wrapper {
+        position: absolute;
+        width: 7%;
+        height: auto;
+        left: 80%;
+        top: 4%;
+    }
+    &__sun {
+        width: 100%;
+        height: 100%;
+    }
+    &__city{
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    &__street {
+        width: 100%;
+        height: 100%;
+    }
+    &__lantern-off {
+        position: absolute;
+        top: 4%;
+        left: 33%;
+        width: 10%;
+        &_two {
+            left: 90%;
+        }
+    }
+    &__lantern-on {
+        position: absolute;
+        top: 3%;
+        left: 81%;
+        width: 14%;
+    }
+    &__car {
+        position: absolute;
+        top: 46%;
+        height: auto;
+        &_one {
+            width: 18%;
+            left: 0%;
+            animation: carOneMotion 20s linear infinite;
+        }
+        &_two {
+            left: 25%;
+            top: 43%;
+            width: 17%;        
+            animation: carTwoMotion 20s linear infinite;
+        }
+        &_three {
+            top: 49%;
+            left: 46%;
+            width: 21%;
+            animation: carThreeMotion 20s linear infinite;
+        }
+        &_four {
+            top: 38%;
+            left: 80%;
+            width: 21%;
+            animation: carFourMotion 20s linear infinite;
+        }
+    }
+    &__man {
+        position: absolute;
+        top: 24%;
+        left: 22%;
+        width: 16%;
+        z-index: 1;
+    }
+    &__woman {
+        position: absolute;
+        top: 45%;
+        left: 16.5%;
+        width: 7%;
+    }
+    &__suitcases {
+        position: absolute;
+        top: 75%;
+        left: 16%;
+        width: 14%;
+        max-width: 191px;
+    }
+    &__taxi {
+        position: absolute;
+        top: 41%;
+        left: 100%;
+        width: 57%;
+        animation: taxiMotionOne 11s 5s linear forwards;
+        @keyframes taxiMotionOne {
+            40% {
+                left: 50%;
+            }
+            70% {
+                left: 50%;
+            }
+            100% {
+                left: -58%;
+            }
+        }        
+    }
+    &__taxi-message {
+        position: absolute;
+        width: 12%;
+        bottom: 53%;
+        right: 18%;
+        opacity: 0;
+        animation: taxiMessage 3s ease-in 10s forwards;
+        @keyframes taxiMessage {
+            50% {
+                opacity: 1;
+                transform-origin: bottom right;
+            }
+        }
+    }
+    &__hand {
+        position: absolute;
+        top: 9%;
+        left: 23%;
+        width: 7%;
+        transform: rotate(155deg);
+        transform-origin: left bottom;
+        animation: handMotion 4s linear 7s;
+        @keyframes handMotion {
+            40% {
+                top: 14%;
+                left: 22%;
+                transform: rotate(32deg);
+                transform-origin: left bottom;
+            }
+            60% {
+                top: 14%;
+                left: 22%;
+                transform: rotate(32deg);
+                transform-origin: left bottom;
+            }
+            100% {
+                top: 10%;
+                left: 23%;
+                transform: rotate(155deg);
+                transform-origin: left bottom;
+            }
+        }
+    }
+    &__man-message {
+        position: absolute;
+        bottom: 76%;
+        right: 67%;
+        width: 12%;
+        opacity: 0;
+        animation: manMessageOne 4s linear 7s forwards;
+        @keyframes manMessageOne {
+            50% {
+                opacity: 1;
+                transform-origin: bottom right;
+            }
+        }
+    }
+    &__hand-woman {
+        position: absolute;
+        top: 66%;
+        left: 18.5%;
+        width: 4%;
+        transform: rotate(352deg);
+        transform-origin: left top;
+        animation: hand-womanMotion 4s linear;
+        @keyframes hand-womanMotion {
+            40% {
+                transform: rotate(312deg);
+            }
+            60% {
+                transform: rotate(312deg);
+            }
+        }
+        @media (max-width: 475px) {
+            top: 64%;
+            left: 18.5%;
+            transform: rotate(354deg);
+            @keyframes hand-womanMotion {
+                40% {
+                    left: 17.5%;
+                    transform: rotate(317deg);
+                }
+                60% {
+                    left: 17.5%;
+                    transform: rotate(317deg);
+                }
+            }
+        }
+        @media (max-width: 380px) {
+            top: 63%;
+            left: 18.5%;
+            transform: rotate(354deg);
+        }
+    }
+    &__woman-message {
+        position: absolute;
+        bottom: 57%;
+        right: 78%;
+        width: 12%;
+        opacity: 0;
+        animation: womanMessage 4s linear forwards;
+        @keyframes womanMessage {
+            50% {
+                opacity: 1;
+                transform-origin: bottom right;
+            }
+        }
+    }
+}
+
+.animation img {
+    width: 100%;
+    height: 100%;
+}
+
+

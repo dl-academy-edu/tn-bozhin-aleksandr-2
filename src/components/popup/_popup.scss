@@ -1,215 +1,312 @@
-.popup-contact {
-    display: none;
-    position: fixed;
-    top: 113px;
-    left: 50%;
-    margin-left: -360px;
-    z-index: 1;
-  
-}
-.popup-contact-open {
-    display: block;
-}
-.popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #7d97dacc;
-    z-index: 0;
-}
-.popup-overlay.show {
-    display: block;
+input,
+textarea {
+  border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-
-/* main Форма Текст */
-.form-text {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 34px;
-    text-transform: uppercase;
-    color: #C29974;
+textarea {
+  resize: none;
 }
 
+.form {
+  display       : flex;
+  flex-direction: row;
+  font-family   : 'Open Sans', 'Arial', sans-serif;
+  font-style    : normal;
+  font-weight   : normal;
 
-/* main Форма общее */
-
-/* Форма */
-.form-section {
-    margin-bottom: 60px;
-}
-.form-section-wrapper {
-    display: flex;
-}
-.contact-form {
-    padding: 42px 40px;
+  &__wrapper {
+    display         : flex;
+    flex-direction  : column;
     background-color: #E5EAF8;
-}
-.form-wrapper {
-    display: flex;
-    justify-content: center;
-}
-.form-block-wrapper {
-    display: flex;
-}
-.form-name-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-.lable-name {
-    margin-bottom: 3px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 17px;
-    cursor: pointer;
-}
-.form-phone-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-}
-.lable-phone {
-    margin-bottom: 3px;
-    margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 17px;
-    cursor: pointer;
-}
-.form-input {
-    padding: 0px 20px;
-    width: 290px;
-    height: 50px;
-    border: 2px solid #00000033;
-}
-.form-input:hover,
-.form-input:focus {
-    border: 2px solid #0000004d;
-    outline: 0px;
-}
-.input-name {
-    width: 600px;
-}
-.form-email-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-.lable-email {
-    margin-bottom: 3px;
-    margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 17px;
-    cursor: pointer;
-}
-.form-message-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-.lable-message {
-    margin-bottom: 3px;
-    margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 17px;
-    cursor: pointer;
-}
-.input-message {
-    padding-top: 14px;
-    padding-bottom: 11px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 600px;
-    height: 150px;
-}
-.checkbox-wrapper {
-    display: flex;
-    padding-left: 0px;
-    margin-top: 20px;
-    margin-bottom: 17px;
-    border: none;
-}
-.checkbox-wrapper input {
-    margin-right: 15px;
-}
-.input-checkbox {
-    margin-left: 34px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 17px;
-    cursor: pointer;
-}
-/* Чек-бокс */
+    max-width           : 680px;
+    padding-top     : 43px;
+    padding-bottom  : 42px;
+    padding-right   : 40px;
+    padding-left    : 40px;
+  }
 
-.checkbox-label{
-    position: relative;
-}
-.checkbox-label::before {
-    content: '';
-    position: absolute;
-    left: -34px;
-    top: -2px;
-    width: 19px;
-    height: 19px;    
-    border: 2px solid #C29974;
-    border-radius: 3px;   
-}
-.checkbox-label::after {
-    content: '';
-    position: absolute;
-    left: -31px;
-    top: -1px;
-    width: 15px;
-    height: 16px;  
-    background-color:  transparent;
-    background-image: url('/static/images/popup/Vector\ 1.svg');
-    opacity: 0;
-    background-repeat: no-repeat;
-}
+  & input:hover {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    transition: .4s;
+  }
 
-.checkbox-input:checked + .checkbox-label::after {
+  & input:active {
+    outline: none;
+    border : 2px solid rgba(0, 0, 0, 0.2);
+    transition: .4s;
+  }
+
+  & input:focus {
+    outline: none;
+    border : 2px solid rgba(0, 0, 0, 0.2);
+    transition: .4s;
+  }
+
+  & textarea:hover {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    transition: .4s;
+  }
+
+  & textarea:active {
+    outline: none;
+    border : 2px solid rgba(0, 0, 0, 0.2);
+    transition: .4s;
+  }
+
+  & textarea:focus {
+    outline: none;
+    border : 2px solid rgba(0, 0, 0, 0.2);
+    transition: .4s;
+  }
+
+  & label {
+    margin-bottom: 6px;
+    font-family  : 'Open Sans', 'Arial', sans-serif;
+    font-style   : normal;
+    font-weight  : normal;
+    font-size    : 14px;
+    line-height  : 16px;
+  }
+
+  &__container {
+    & input {
+      padding-left: 20px;
+    }
+
+    & textarea {
+      padding-left: 10px;
+    }
+  }
+
+  &__name {
+    display       : flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    & label {
+      margin-bottom: 6px;
+    }
+
+    & input {
+      height: 50px;
+      width : 600px;
+    }
+
+    & input::placeholder {
+      padding-top   : 14px;
+      padding-bottom: 11px;
+      padding-right : 485px;
+      font-size     : 18px;
+      line-height   : 25px;
+      color         : black;
+    }
+  }
+
+  &__phone-email {
+    display       : flex;
+    flex-direction: row;
+    margin-bottom : 20px;
+
+    & div {
+      display       : flex;
+      flex-direction: column;
+    }
+
+    & input {
+      width : 290px;
+      height: 50px;
+      margin-right: 20px;
+    }
+  }
+
+  &__textarea {
+    display       : flex;
+    flex-direction: column;
+    margin-bottom : 22px;
+
+    & textarea {
+      width : 600px;
+      height: 150px;
+    }
+  }
+
+  &__agree {
+    display       : flex;
+    flex-direction: row;
+    margin-bottom : 17px;
+    & input {
+      margin-right: 16px;
+    }
+  }
+
+  &__agree-label {
+    position    : relative;
+    padding-left: 34px;
+
+    &::before {
+      content      : "";
+      position     : absolute;
+      top          : -2px;
+      left         : 0px;
+      width        : 19px;
+      height       : 19px;
+      border       : 2px solid #C29974;
+      border-radius: 3px;
+    }
+
+    &::after {
+      content          : '';
+      position         : absolute;
+      top              : -2px;
+      left             : 3px;
+      width            : 15px;
+      height           : 15px;
+      background-image : url(../../static/images/checkbox/vector1.svg);
+      background-repeat: no-repeat;
+      opacity          : 0;
+    }
+  }
+
+  &__agree-input:checked+&__agree-label::after {
     opacity: 1;
-    cursor: pointer;
-}
-.checkbox-input:disabled + .checkbox-label::before { 
-    background-image: url('/static/images/popup/Vector\ 1.svg');
-    opacity: 0.5;
-    cursor: auto;
-}
-.checkbox-input:disabled + .input-checkbox {
-    color: #908484;
-    cursor: auto;
-    text-decoration-line: none;
-}
-.checkbox-wrapper:focus-within{
-    outline: solid 2px #000;
+    transition: .4s;
+  }
+
+  &__agree-input:checked+&__agree-label {
+    text-decoration: underline;
+    transition: .4s;
+  }
+
+  &__button {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    min-width      : 106px;
+    min-height     : 40px;
+    &:disabled {
+      background-color: #EEE4DB;
+    }
+  }
 }
 
-/* Крестик */
-.popup-contact-btn {
-    position: absolute;
-    top: 0px;
-    right: 80px;
-    width: 15px;
-    height: 15px;
-    background-color: transparent;
-    background-image: url('/static/images/popup/cross.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    cursor: pointer;
+                                              /* MEDIA */
+@media (min-width: 768px) and (max-width: 1180px) {
+  .form {
+    &__wrapper {
+      max-width: 680px;
+      padding: 42px 56px;
+    }
+    &__container {
+      & input {
+        padding-left: 20px;
+      }
+    }
+    &__name {
+      & label {
+        margin-bottom: 6px;
+      }
+      & input {
+        height: 50px;
+        width : 100%;
+      }
+      & input::placeholder {
+        padding-top   : 16px;
+        padding-bottom: 15px;
+        font-size     : 16px;
+        line-height   : 19px;
+      }
+    }
+    &__phone-email {
+      & div {
+        width: 100%;
+      & input {
+        width : 100%;
+        height: 50px;
+        margin-right: 0;
+      }
+      }
+    }
+    &__email {
+      margin-left: 20px;
+    }
+    &__textarea {
+      margin-bottom : 22px;
+  
+      & textarea {
+        width : 100%;
+        height: 150px;
+      }
+    }
+    &__agree {
+      margin-bottom : 20px;
+      & input {
+        margin-right: 15px;
+      }
+    }
 }
-.popup-contact-btn:hover {
-    background-image: url('/static/images/popup/cross2.svg');
 }
-.popup-contact-btn:active {
-    background-image: url('/static/images/popup/cross3.svg');
+@media (min-width: 375px) and (max-width: 768px) {
+  .form {
+    &__wrapper {
+      max-width: 680px;
+      padding: 25px 25px;
+    }
+    &__container {
+      & input {
+        padding-left: 15px;
+      }
+    }
+    &__name {
+      & label {
+        margin-bottom: 5px;
+      }
+      & input {
+        height: 40px;
+        width : 100%;
+      }
+      & input::placeholder {
+        padding-top   : 12px;
+        padding-bottom: 11px;
+        font-size     : 14px;
+        line-height   : 16px;
+      }
+    }
+    &__phone-email {
+      flex-direction: column;
+      :first-child :not(label) {
+        margin-bottom: 15px;
+      }
+      & input {
+        width : 100%;
+        height: 40px;
+        margin-right: 0;
+      }
+    }
+    &__textarea {
+      margin-bottom : 16px;
+  
+      & textarea {
+        width : 100%;
+        height: 150px;
+      }
+    }
+    &__agree {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom : 20px;
+    }
+    &__agree-label {
+      &::before {
+        width        : 17px;
+        height       : 17px;
+      }
+  
+      &::after {
+        left: 2px;
+        width            : 13px;
+        height           : 15px;
+      }
+    }
 }
-.popup-contact-btn:focus-within {
-    outline: solid 2px #000;
 }

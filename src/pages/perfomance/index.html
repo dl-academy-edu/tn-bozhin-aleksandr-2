@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-widthinitial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;600;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+    @@include('header/index.html', {
+    'link' : '../../index.html',
+    'img' : '/static/images/header/header-logo.svg'
+    })
+    <main class="main">
+        <div class="breadcrumbs container">
+            <h1 class="breadcrumbs__title heading">Animation scene</h1>
+            <ul class="breadcrumbs__list">
+                @@include('breadcrumbs/index.html', {
+                'class' : 'breadcrumbs__item',
+                'name-page' : 'Animation'
+                })
+            </ul>
+        </div>
+        <section class="animation">
+            <h2 class="animation__title sub-heading visually-hidden">Animation</h2>
+            <div class="animation__sky">
+                <picture class="animation__cloud-wrapper animation__cloud-wrapper_one">
+                    <source srcset="/static/images/animation/clouds-sun/cloud1-2x.png 2x">
+                    <img src="/static/images/animation/clouds-sun/cloud1.png"
+                        alt="cloud" class="animation__cloud-img" width="91" height="26">
+                </picture>
+                <picture class="animation__cloud-wrapper animation__cloud-wrapper_two">
+                    <source srcset="/static/images/animation/clouds-sun/cloud2-2x.png 2x">
+                    <img src="/static/images/animation/clouds-sun/cloud2.png"
+                        alt="cloud" class="animation__cloud-img" width="185" height="38">
+                </picture>
+                <picture class="animation__cloud-wrapper animation__cloud-wrapper_three">
+                    <source srcset="/static/images/animation/clouds-sun/cloud3-2x.png 2x">
+                    <img src="/static/images/animation/clouds-sun/cloud3.png"
+                        alt="cloud" class="animation__cloud-img" width="155" height="32">
+                </picture>
+                <picture class="animation__cloud-wrapper animation__cloud-wrapper_four">
+                    <source srcset="/static/images/animation/clouds-sun/cloud4-2x.png 2x">
+                    <img src="/static/images/animation/clouds-sun/cloud4.png" alt="cloud"
+                        class="animation__cloud-img" width="201" height="41">
+                </picture>
+                <picture class="animation__cloud-wrapper animation__cloud-wrapper_five">
+                    <source srcset="/static/images/animation/clouds-sun/cloud5-2x.png 2x">
+                    <img src="/static/images/animation/clouds-sun/cloud5.png" alt="cloud"
+                        class="animation__cloud-img" width="91" height="26">
+                </picture>
+                <picture class="animation__sun-wrapper">
+                    <source srcset="/static/images/animation/clouds-sun/sun-2x.png 2x">
+                    <img src="/static/images/animation/clouds-sun/sun.png" alt="sun" class="animation__sun"
+                        width="59" height="59">
+                </picture>
+                <picture class="animation__cloud-wrapper animation__cloud-wrapper_six">
+                    <source srcset="/static/images/animation/clouds-sun/cloud6-2x.png 2x">
+                    <img src="/static/images/animation/clouds-sun/cloud6.png" alt="cloud"
+                        class="animation__cloud-img" width="164" height="33">
+                </picture>
+            </div>
+            <div class="animation__city">
+                <picture class="animation__street">
+                    <source srcset="/static/images/animation/city2x.png 2x">
+                    <img src="/static/images/animation/city.png" alt="city" class="animation__street-img">
+                </picture>
+                <picture class="animation__car animation__car_two">
+                    <source srcset="/static/images/animation/cars/car2-2x.png 2x">
+                    <img src="/static/images/animation/cars/car2.png" alt="car"
+                        class="animation__car-img">
+                </picture>
+                <picture class="animation__car animation__car_three">
+                    <source srcset="/static/images/animation/cars/car3-2x.png 2x">
+                    <img src="/static/images/animation/cars/car3.png" alt="car"
+                        class="animation__car-img">
+                </picture>
+                <picture class="animation__car animation__car_one">
+                    <source srcset="/static/images/animation/cars/car1-2x.png 2x">
+                    <img src="/static/images/animation/cars/car1.png" alt="car"
+                        class="animation__car-img">
+                </picture>
+                <picture class="animation__car animation__car_four">
+                    <source srcset="/static/images/animation/cars/car4-2x.png 2x">
+                    <img src="/static/images/animation/cars/car4.png" alt="car"
+                        class="animation__car-img">
+                </picture>
+                <picture class="animation__lantern-off">
+                    <source srcset="/static/images/animation/lanterns/lantern-off-2x.png 2x">
+                    <img src="/static/images/animation/lanterns/lantern-off.png" alt="lantern"
+                        class="animation__lantern-img">
+                </picture>
+                <picture class="animation__lantern-off animation__lantern-off_two">
+                    <source srcset="/static/images/animation/lanterns/lantern-off-2x.png 2x">
+                    <img src="/static/images/animation/lanterns/lantern-off.png" alt="lantern"
+                        class="animation__lantern-img">
+                </picture>
+                <picture class="animation__taxi">
+                    <source srcset="/static/images/animation/taxi/taxi2x.png 2x">
+                    <img src="/static/images/animation/taxi/taxi.png" alt="taxi" class="animation__taxi-img">
+                </picture>
+                <picture class="animation__taxi-message">
+                    <source srcset="/static/images/animation/taxi/taxi-message-2x.png 2x">
+                    <img src="/static/images/animation/taxi/taxi-message.png" alt="taxi-message"
+                        class="animation__taxi-img">
+                </picture>
+                <picture class="animation__lantern-on">
+                    <source srcset="/static/images/animation/lanterns/lantern-on-2x.png 2x">
+                    <img src="/static/images/animation/lanterns/lantern-on.png" alt="lantern"
+                        class="animation__lantern-img">
+                </picture>
+                <picture class="animation__hand">
+                    <source srcset="/static/images/animation/people/hand-2x.png 2x">
+                    <img src="/static/images/animation/people/hand.png" alt="hand" class="animation__hand-img">
+                </picture>
+                <picture class="animation__man">
+                    <source srcset="/static/images/animation/people/man-2x.png 2x">
+                    <img src="/static/images/animation/people/man.png" alt="man" class="animation__man-img">
+                </picture>
+                <picture class="animation__man-message">
+                    <source srcset="/static/images/animation/people/man-message-2x.png 2x">
+                    <img src="/static/images/animation/people/man-message.png" alt="man-message"
+                        class="animation__man-message-img">
+                </picture>
+                <picture class="animation__woman">
+                    <source srcset="/static/images/animation/people/woman-2x.png 2x">
+                    <img src="/static/images/animation/people/woman.png" alt="woman" class="animation__woman-img">
+                </picture>
+                <picture class="animation__woman-message">
+                    <source srcset="/static/images/animation/people/woman-message-2x.png 2x">
+                    <img src="/static/images/animation/people/woman-message.png" alt="woman-message"
+                        class="animation__woman-message-img">
+                </picture>
+                <picture class="animation__hand-woman">
+                    <source srcset="/static/images/animation/people/hand-woman-2x.png 2x">
+                    <img src="/static/images/animation/people/hand-woman.png" alt="hand-woman"
+                        class="animation__hand-woman-img">
+                </picture>
+                <picture class="animation__suitcases">
+                    <source srcset="/static/images/animation/people/suitcases-2x.png 2x">
+                    <img src="/static/images/animation/people/suitcases.png" alt="suitcases"
+                        class="animation__suitcases-img">
+                </picture>
+            </div>
+        </section>
+        <audio controls>
+            <source src="/static/music/audio.mp3" type="audio/mpeg">
+        </audio>
+    </main>
+    @@include('footer/index.html')
+</body>
+
+</html>

@@ -1,90 +1,122 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link href="/common.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog</title>
-  </head>
-  <body>
-      @@include('header/index.html')
-      <a href="/pages/contactus/index.html" class="contact-us">Contact us</a>
-    </header>
-    <main class="main container">
-      @@include('subtitle/index.html',{
-        "title":"Catalog"
-      })
-      <section class="breadcrumbs">
-        <a href="/index.html">
-            <h3 class="main-heading">Home</h3>
-        </a>
-        <span class="main-heading-transparent">Catalog
-        </span>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;600;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+    @@include('header/index.html', {
+        'link' : '../../index.html',
+        'img' : '/static/images/header/header-logo.svg'
+    })
+    <main class="main-catalog">
+        <div class="breadcrumbs container">
+            <h1 class="breadcrumbs__title heading">Category products</h1>
+            <ul class="breadcrumbs__list">
+                @@include('breadcrumbs/index.html', {
+                    'class' : 'breadcrumbs__item',
+                    'name-page' : 'Catalog'
+                })
+            </ul>
+        </div>
+        <section class="catalog container">
+            @@include('sub-heading/index.html', {
+                'class' : 'visually-hidden',
+                'text' : 'Catalog'
+                })
+            <ul class="catalog__list catalog-txt-style">
+                @@include('catalog-card/index.html',{
+                    'classLi' : 'catalog__item col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6',
+                    'href' : '#',
+                    'class' : 'catalog__link',
+                    'classTitle' : 'catalog__title',
+                    'text' : 'Apparel kids',
+                    'img2x' : '../../static/images/category/apparel2x.png 2x',
+                    'img' : '../../static/images/category/apparel.png',
+                    'classImg' : 'catalog__img apparel-bckgrnd content'
+                })
+                @@include('catalog-card/index.html',{
+                    'classLi' : 'catalog__item col-xl-3 col-lg-4 col-md-4 col-sm-6 col-md-4 col-xs-6',
+                    'href' : '#',
+                    'class' : 'catalog__link',
+                    'classTitle' : 'catalog__title',
+                    'text' : 'Holiday shop',
+                    'img2x' : '../../static/images/category/holiday2x.png 2x',
+                    'img' : '../../static/images/category/holiday.png',
+                    'classImg' : 'catalog__img holiday-bckgrnd content'
+                })
+                @@include('catalog-card/index.html',{
+                    'classLi' : 'catalog__item col-xl-3 add-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6',
+                    'href' : '../toys/index.html',
+                    'class' : 'catalog__link',
+                    'classTitle' : 'catalog__title',
+                    'text' : 'Toys',
+                    'img2x' : '../../static/images/category/toys2x.png 2x',
+                    'img' : '../../static/images/category/toys.png',
+                    'classImg' : 'catalog__img toys-bckgrnd content'
+                })
+                @@include('catalog-card/index.html',{
+                    'classLi' : 'catalog__item col-xl-3 skip-xl-2 col-lg-4 col-md-4 col-sm-6 col-xs-6',
+                    'href' : '#',
+                    'class' : 'catalog__link',
+                    'classTitle' : 'catalog__title',
+                    'text' : 'Accessories',
+                    'img2x' : '../../static/images/category/accessories2x.png 2x',
+                    'img' : '../../static/images/category/accessories.png',
+                    'classImg' : 'catalog__img accessories-bckgrnd content'
+                })
+                @@include('catalog-card/index.html',{
+                    'classLi' : 'catalog__item col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6',
+                    'href' : '#',
+                    'class' : 'catalog__link',
+                    'classTitle' : 'catalog__title',
+                    'text' : 'Sale',
+                    'img2x' : '../../static/images/category/sale2x.png 2x',
+                    'img' : '../../static/images/category/sale.png',
+                    'classImg' : 'catalog__img content'
+                })
+                @@include('catalog-card/index.html',{
+                    'classLi' : 'catalog__item col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6',
+                    'href' : '#',
+                    'class' : 'catalog__link',
+                    'classTitle' : 'catalog__title',
+                    'text' : 'Apparel adults',
+                    'img2x' : '../../static/images/category/adults2x.png 2x',
+                    'img' : '../../static/images/category/adults.png',
+                    'classImg' : 'catalog__img content'
+                })
+
+            </ul>
         </section>
-        <section class="category">
-          <div class="category-wrapper">
-              <ul class="category-list">
-                  @@include('category-list-item/index.html',{
-                      "category-pic":"/static/images/Category/category1.jpg",
-                      "category-text":"Apparel kids",
-                      "href":"#"
-                    })
-                    @@include('category-list-item/index.html',{
-                      "category-pic":"/static/images/Category/category2.jpg",
-                      "category-text":"Holiday shop",
-                      "href":"#"
-                    })
-                    @@include('category-list-item/index.html',{
-                      "category-pic":"/static/images/Category/category3.jpg",
-                      "category-text":"Toys",
-                      "href":"/pages/toys/index.html"
-                    })
-              </ul>
-          </div>
-          <div class="category-wrapper block">
-              <ul class="category-list">
-                  @@include('category-list-item/index.html',{
-                      "category-pic":"/static/images/Category/category4.jpg",
-                      "category-text":"Accessories",
-                      "href":"#"
-                    })
-                    @@include('category-list-item/index.html',{
-                      "category-pic":"/static/images/Category/category5.jpg",
-                      "category-text":"Sale",
-                      "href":"#"
-                    })
-                    @@include('category-list-item/index.html',{
-                      "category-pic":"/static/images/Category/category6.jpg",
-                      "category-text":"Apparel adults",
-                      "href":"#"
-                    })
-              </ul>
-          </div>
-      </section>
-      <section class="preview">
-        <h2 class="categoty-title caption">Product Description</h2>
-        <p class="history-delivery">Interactive doll Zapf Creation Baby Born Sister can drink
-            from a bottle
-            and almost really cry. You can even bathe her, just like a little sister.
-        </p>
-        <p class="history-delivery">A toy with a height of 43 cm bends its knees, the head rotates, it
-            can
-            stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
-        </p>
-        <p class="history-delivery">The set includes a miniature set of fashionable clothes, a
-            hairbrush, a
-            bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the
-            doll, the other for her young mistress.</p>
-    </section>
+        <section class="description container">
+            <div class="description__wrapper">
+                <h2 class="description__title sub-heading">Product Description</h2>
+                <p class="description__txt txt">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle
+                    and
+                    almost really cry. You can even bathe her, just like a little sister.</p>
+                <p class="description__txt txt">A toy with a height of 43 cm bends its knees, the head rotates, it can
+                    stand
+                    upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.
+                </p>
+                <p class="description__txt txt">The set includes a miniature set of fashionable clothes, a hairbrush, a
+                    bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for
+                    the
+                    doll, the other for her young mistress.</p>
+            </div>
+        </section>
     </main>
     @@include('footer/index.html')
-  </body>
+</body>
+
 </html>

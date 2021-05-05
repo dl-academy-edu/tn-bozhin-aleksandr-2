@@ -1,111 +1,266 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link href="/common.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
-  <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400&display=swap"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Bozhin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;600;700&family=Open+Sans:wght@400;700&display=swap"
         rel="stylesheet">
-  <link rel="shortcut icon" href="/static/images/favicon.ico">
-  <title>Project Bozhin</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
 </head>
 
 <body>
-  @@include('header/index.html')
-  <button type="button" class="contact-us">Contact us</button>
-</header>
-  <main class="main">
-    <section class="container">
-      <div class="main-banner">
-          <p class="lead"><span>01</span></p>
-          <div class="line-monstr-wrapper">
-              <div class="line-list-wrapper">
-                  <ol class="line-list">
-                      @@include('line-slider/index.html')
-                      @@include('line-slider/index.html')
-                      @@include('line-slider/index.html')
-                      @@include('line-slider/index.html')
-                  </ol>
-              </div>
-              <div class="slide-title-wrapper">
-                  <h1 class="slide-title">The ooh noo collection</h1>
-                  <p class="slide-paragraf">Disigned in Slovenia</p>
-                  <button class="button-slide btn" type="button" aria-label="Explore now">Explore now</button>
-                  </div>
-          </div>
-          <p class="line-paragraf">Free (continental) USA shipping on all orders of $100 USD or more!</p>
-      </div>
-  </section>
-    <section class="category container">
-      <h2 class="category-title caption">Category Products</h2>
-      <ul class="category-list">
-        @@include('category-list-item/index.html',{
-            "category-pic":"/static/images/category/category1.jpg",
-            "category-text":"Apparel kids",
-            "href":"#"
-          })
-          @@include('category-list-item/index.html',{
-            "category-pic":"/static/images/category/category2.jpg",
-            "category-text":"Holiday shop",
-            "href":"#"
-          })
-          @@include('category-list-item/index.html',{
-            "category-pic":"/static/images/category/category3.jpg",
-            "category-text":"Toys",
-            "href":"/pages/toys/index.html"
-          })
-          @@include('category-list-item/index.html',{
-            "category-pic":"/static/images/category/category4.jpg",
-            "category-text":"Accessories",
-            "href":"#"
-          })
-      </ul>
-            <div class="arrows-wrapper">
-              <div>
-                <button class="arrow" type="button" aria-label="arrows slide left">
-                    <img src="/static/images/arrows/arrowleft.png" alt="" class="pictures">
-                </button>
-                <button class="arrow" type="button" aria-label="arrows slide right">
-                    <img src="/static/images/arrows/arrowright1.png" alt="" class="pictures">
-                </button>
+    @@include('header/index.html', {
+    'link' : 'index.html',
+    'img' : '/static/images/header/header-logo.svg'
+    })
+    <main class="main">
+        <h1 class="visually-hidden heading">Dlk</h1>
+        <section class="slider container">
+            <div class="slider__wrapper">
+                <div class="slider__wrapper-container">
+                    <div class="slider-control">
+                        <span class="slider-control__number">01</span>
+                        <ul class="slider-control__list">
+                            <li class="slider-control__item">
+                                <button type="button" class="slider-control__btn slider-control__btn_active"
+                                    aria-label=" change slide"></button>
+                            </li>
+                            <li class="slider-control__item">
+                                <button type="button" class="slider-control__btn" aria-label="change slide"></button>
+                            </li>
+                            <li class="slider-control__item">
+                                <button type="button" class="slider-control__btn" aria-label="change slide"></button>
+                            </li>
+                            <li class="slider-control__item">
+                                <button type="button" class="slider-control__btn" aria-label="change slide"></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slider-offer">
+                        <h2 class="slider-offer__title">The ooh noo collection
+                        </h2>
+                        <p class="slider-offer__text">Designed in Slovenia</p>
+                        @@include('button/index.html', {
+                        'text': 'Explore now',
+                        'class': 'slider-offer__button button-style',
+                        'type' : 'button'
+                        })
+                    </div>
+                    <div class="slider__img-wrapper">
+                        <picture>
+                            <source
+                                srcset="/static/images/hero/monster-mobile.png, /static/images/hero/monster-mobile2x.png 2x"
+                                media="(max-width: 499px)" class="slider__img">
+                            <source srcset="/static/images/hero/monster2x.png 2x">
+                            <img src="/static/images/hero/hero-image.png"
+                                alt="Monster" class="slider__img" height="635" width="460">
+                        </picture>
+                    </div>
+                </div>
+                <p class="slider__aside">Free (continental) USA shipping on all orders of $100 USD or more!</p>
             </div>
-            <div class="category-slide-wrapper">
-                <p>Modern finds for the modern home. Curated goods by unique
-                    designers around the world from fashion to furniture for kids and adults.
-                </p>
+        </section>
+        <section class="category container">
+            @@include('sub-heading/index.html', {
+            'class' : 'category__title',
+            'text' : 'Category products'
+            })
+            <div class="category__list-wrapper">
+                <ul class="category__list catalog-txt-style">
+                    @@include('catalog-card/index.html', {
+                    'classLi' : 'category__item',
+                    'href' : '#',
+                    'class' : 'category__link',
+                    'classTitle' : 'category__card-title',
+                    'text' : 'Apparel kids',
+                    'img2x' : '../../static/images/category/apparel2x.png 2x',
+                    'img' : '../../static/images/category/apparel.png',
+                    'classImg' : 'category__img apparel-bckgrnd'
+                    })
+                    @@include('catalog-card/index.html', {
+                    'classLi' : 'category__item',
+                    'href' : '#',
+                    'class' : 'category__link',
+                    'classTitle' : 'category__card-title',
+                    'text' : 'Holiday shop',
+                    'img2x' : '../../static/images/category/holiday2x.png 2x',
+                    'img' : '../../static/images/category/holiday.png',
+                    'classImg' : 'category__img holiday-bckgrnd'
+                    })
+                    @@include('catalog-card/index.html', {
+                    'classLi' : 'category__item',
+                    'href' : 'pages/toys/index.html',
+                    'class' : 'category__link',
+                    'classTitle' : 'category__card-title',
+                    'text' : 'Toys',
+                    'img2x' : '../../static/images/category/toys2x.png 2x',
+                    'img' : '../../static/images/category/toys.png',
+                    'classImg' : 'category__img toys-bckgrnd'
+                    })
+                    @@include('catalog-card/index.html', {
+                    'classLi' : 'category__item',
+                    'href' : '#',
+                    'class' : 'category__link',
+                    'classTitle' : 'category__card-title',
+                    'text' : 'Accessories',
+                    'img2x' : '../../static/images/category/accessories2x.png 2x',
+                    'img' : '../../static/images/category/accessories.png',
+                    'classImg' : 'category__img accessories-bckgrnd'
+                    })
+                </ul>
             </div>
-       </div>
-      </section>
-      <section class="information container">
-        <img class="information-pictures pictures" src="/static/images/main-information/history-pictures.jpg" alt="">
-        <div>
-            <h2 class="information-name caption">Delivery</h2>
-            <ul class="information-list">
-                <li class="category-title"> <a href="#" class="title-active title">Delivery</a></li>
-                <li class="category-title"> <a href="#" class="title">Guarantee</a></li>
-                <li class="category-title"> <a href="#" class="title">Credit</a></li>
+            <div class="category__control-wrapper">
+                <div class="category__button-wrapper">
+                    <button type="button" class="category__button" aria-label="scroll category left">
+                        <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="category__arrow" d="M 16 4 L 3 16 L 16 28" stroke="#1E0606" stroke-width="4" />
+                        </svg>
+                    </button>
+                    <button type="button" class="category__button" aria-label="scroll category right">
+                        <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="category__arrow" d="M 2 4 L 15 16 L 2 28" stroke="#1E0606" stroke-width="4" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="category__txt txt">Modern finds for the modern home. Curated goods by unique
+                    designers
+                    around the world from fashion to furniture for kids and adults.</p>
+            </div>
+        </section>
+        <section class="delivery container">
+            <div class="delivery__img-wrapper">
+                <picture>
+                    <source srcset="/static/images/delivery/girl-mobile.png, /static/images/delivery/girl-mobile2x.png 2x"
+                    class="delivery__img" media="(max-width: 641px)">
+                    <source srcset="/static/images/delivery/girl2x.png 2x">
+                    <img src="/static/images/delivery/girl.png"
+                        class="delivery__img" alt="girl">
+                </picture>
+            </div>
+            <div class="delivery__wrapper">
+                @@include('sub-heading/index.html', {
+                'class' : 'delivery__title',
+                'text' : 'Delivery'
+                })
+                <ul class="delivery__menu-list">
+                    <li class="delivery__menu-item">
+                        <button type="button"
+                            class="delivery__menu-button delivery__menu-button_active">Delivery</button>
+                    </li>
+                    <li class="delivery__menu-item">
+                        <button type="button" class="delivery__menu-button">Guarantee</button>
+
+                    </li>
+                    <li class="delivery__menu-item">
+                        <button type="button" class="delivery__menu-button">Credit</button>
+                    </li>
+                </ul>
+                <p class="delivery__text_first txt">Some days i feel like i've been working on dlk my entire life and
+                    there are
+                    other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+                <p class="delivery__text txt">What started as an outlet to deal with the traumatic loss of my husband,
+                    dlk
+                    has now become a truly happy place for me and i have you and all of the beautiful designers that we
+                    work
+                    with to thank!</p>
+                @@include('link-button/index.html', {
+                'text': 'Learn more',
+                'class': 'delivery__button button-style',
+                })
+            </div>
+        </section>
+        <section class="partners container">
+            @@include('sub-heading/index.html', {
+            'class' : 'partners__title visually-hidden',
+            'text' : 'Partners'
+            })
+            <ul class="partners__list">
+                <li class="partners__item">
+                    <a href="#" class="partners__link" aria-label="Go to Mail.ru">
+                        <picture>
+                            <source srcset="static/images/partners/mail2x.png 2x">
+                            <img src="static/images/partners/mail.png"
+                                alt="Partner" class="partners__img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="partners__item">
+                    <a href="#" class="partners__link" aria-label="Go to Apple">
+                        <picture>
+                            <source srcset="static/images/partners/apple2x.png 2x">
+                        <img src="static/images/partners/apple.png"
+                            alt="Partner" class="partners__img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="partners__item">
+                    <a href="#" class="partners__link" aria-label="Go to Eltex">
+                        <picture>
+                            <source srcset="static/images/partners/eltex2x.png 2x">
+                        <img src="static/images/partners/eltex.png"
+                            alt="Partner" class="partners__img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="partners__item">
+                    <a href="#" class="partners__link" aria-label="Go to Owox">
+                        <picture>
+                            <source srcset="static/images/partners/owox2x.png 2x">
+                        <img src="static/images/partners/owox.png"
+                            alt="Partner" class="partners__img">
+                        </picture>
+                    </a>
+                </li>
             </ul>
-            <p class="information-delivery">Some days i feel like i've been working on dlk my entire life
-                and there are other days that i am completely shocked that four years have flown by. It's simply
-                magical.
-            </p>
-            <p class="information-delivery">What started as an outlet to deal with the traumatic loss of my
-                husband, dlk has now become a truly happy place for me and i have you and all of the beautiful
-                designers that we work with
-                to thank!
-            </p>
-            <a class="btn" href="#">Learn more</a>
+        </section>
+        <section class="aside container">
+            <div class="aside__buy">
+                @@include('sub-heading/index.html', {
+                'class' : 'aside__buy-title',
+                'text' : 'Design Life Kids'
+                })
+                <h3 class="aside__buy-subtitle">About Us</h3>
+                <p class="aside__buy-txt txt">Some days i feel like i've been working on dlk my entire life and there
+                    are
+                    other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+                @@include('link-button/index.html', {
+                'text': 'BUY NOW',
+                'class': 'aside__buy-button button-style',
+                })
+            </div>
+            <div class="aside__contacts">
+                @@include('sub-heading/index.html', {
+                'class' : 'aside__contacts-title',
+                'text' : 'Contacts'
+                })
+                <p class="aside__contacts-txt txt">Some days i feel like i've been working on dlk my entire life and
+                    there
+                    are
+                    other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+                    <iframe class="aside__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6307.265825955937!2d-122.4209335843158!3d37.77520472740834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580a196ede719%3A0x2fb5607634331f2f!2zSGF5ZXMgVmFsbGV5LCDQodCw0L0t0KTRgNCw0L3RhtC40YHQutC-LCDQmtCw0LvQuNGE0L7RgNC90LjRjyA5NDEwMiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1620234041583!5m2!1sru!2sru" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+                </section>
+        <audio controls>
+            <source src="/static/music/audio.mp3" type="audio/mpeg">
+        </audio>
+        
+    </main>
+    @@include('footer/index.html')
+    <div class="form popup">
+        <div class="form__wrapper form__wrapper_main-mobile">
+            @@include('popup/index.html')
+            <button class="popup__close-button" aria-label="Close"></button>
         </div>
-    </section>
-    @@include('company/index.html')
-    @@include('main/main-about/index.html')
-  </main>
-  @@include('popup/index.html')
-  @@include('footer/index.html')
-  <script src="scripts.js"></script>
+    </div>
+    <div class="popup__overlay"></div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

@@ -1,48 +1,224 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link href="/common.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@700&family=Open+Sans:wght@400;700&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toys</title>
-  </head>
-  <body>
-    @@include('header/index.html')
-      <a href="/pages/contactus/index.html" class="contact-us">Contact us</a>
-    </header>
-    <main class="main">
-      <div class="container">
-        @@include('subtitle/index.html',{
-            "title":"Toys"
-          })
-          <div class="breadcrumbs">
-            <a href="/index.html">
-                <h3 class="main-heading">Home</h3>
-            </a>
-            <a href="/pages/catalog/index.html">
-                <h3 class="main-heading">Catalog</h3>
-            </a>
-            <span class="main-heading-transparent">Toy
-            </span>
-        </div>
-        </div>
-        @@include('toy/toy-form/index.html')
-        <section class="items container">
-          <h4 class="visually-hidden">Toys</h4>
-              @@include('toy/items-ul/index.html')
-      </section>
-        <section class="pagination container">
-        @@include('pagination/index.html')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;600;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+    @@include('header/index.html', {
+        'link' : '../../index.html',
+        'img' : '/static/images/header/header-logo.svg'
+    })
+    <main class="toys-main"> 
+        <div class="breadcrumbs container">
+            <h1 class="breadcrumbs__title heading">
+                Toy for kids
+            </h1>
+            <ul class="breadcrumbs__list">
+                @@include('breadcrumbs/index.html', {
+                    'class' : 'breadcrumbs__item',
+                    'name-page' : 'Catalog'
+                })
+                <li class="breadcrumbs__item">
+                    <svg width="8" height="12" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2L15 15L2 28" stroke="black" stroke-width="4"/>
+                        </svg>
+                </li>
+                <li class="breadcrumbs__item">Toys
+                </li>
+            </ul>
+        </div> 
+        <form action="https://echo.htmlacademy.ru" method="POST" id="toys-form" class="toys-form container"
+            aria-label="change the filter value" tabindex="0">
+            <fieldset class="toys-form__filter_margin-cost" form="toys-form" name="filter-cost">
+                <legend class="toys-form__title">Cost</legend>
+                <div class="toys-form__cost-filter">
+                    <img src="../../static/images/toys/cost/Rectangle2.svg" alt="cost">
+                    <div class="toys-form__strip">
+                        <img src="../../static/images/toys/cost/Rectangle1.svg" alt="cost">
+                    </div>
+                    <div class="toys-form__circle">
+                        <div class="toys-form__circle_big">
+                            <img src="../../static/images/toys/cost/Ellipse1.svg" alt="cost" width="24" height="24">
+                            <div class="toys-form__circle_small">
+                                <img src="../../static/images/toys/cost/Ellipse3.svg" alt="cost" width="8" height="8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toys-form__cost-value">
+                    <p class="toys-form__cost-value_min txt">0</p>
+                    <p class="toys-form__cost-value_max txt">500</p>
+                </div>
+            </fieldset>
+            <fieldset class="toys-form__filter_margin-color" form="toys-form" name="filter-color">
+                <legend class="toys-form__title">Color</legend>
+                <ul class="toys-form__color-list">
+                    <li class="toys-form__color-item">
+                        <input id="form-color-black-input" type="checkbox" class="toys-form__color-input  visually-hidden"
+                            checked>
+                        <label for="form-color-black-input" class="toys-form__color-label">Black</label>
+                    </li>
+                    <li class="toys-form__color-item">
+                        <input id="form-color-blue-input" type="checkbox" class="toys-form__color-input  visually-hidden">
+                        <label for="form-color-blue-input" class="toys-form__color-label">Blue</label>
+                    </li>
+                    <li class="toys-form__color-item">
+                        <input id="form-color-green-input" type="checkbox" class="toys-form__color-input  visually-hidden">
+                        <label for="form-color-green-input" class="toys-form__color-label">Green</label>
+                    </li>
+                    <li class="toys-form__color-item">
+                        <input id="form-color-white-input" type="checkbox" class="toys-form__color-input  visually-hidden">
+                        <label for="form-color-white-input" class="toys-form__color-label">White</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="toys-form__filter_margin-delivery" form="toys-form" name="filter-delivery">
+                <legend class="toys-form__title">Delivery</legend>
+                <ul class="toys-form__delivery-list">
+                    <li class="toys-form__delivery-item">
+                        <input id="form-free-delivery-input" type="radio" value="Free shipping" name="delivery"
+                            class="toys-form__delivery-input  visually-hidden">
+                        <label for="form-free-delivery-input" class="toys-form__delivery-label">Free shipping</label>
+                    </li>
+                    <li class="toys-form__delivery-item">
+                        <input id="form-fast-delivery-input" type="radio" value="Fast shipping" name="delivery"
+                            class="toys-form__delivery-input  visually-hidden" checked>
+                        <label for="form-fast-delivery-input" class="toys-form__delivery-label">Fast shipping</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="toys-form__filter_margin-amount" form="toys-form" name="filter-amount">
+                <legend class="toys-form__title">Amount</legend>
+                <ul class="toys-form__amount-list">
+                    <li class="toys-form__amount-item">
+                        <input id="min-amount-input" type="radio" class="toys-form__amount-input visually-hidden"
+                            value="0-5" name="amount" checked>
+                        <label for="min-amount-input" class="toys-form__amount-label">0-5</label>
+                    </li>
+                    <li class="toys-form__amount-item">
+                        <input id="middle-amount-input" type="radio" class="toys-form__amount-input visually-hidden"
+                            value="10-20" name="amount">
+                        <label for="middle-amount-input" class="toys-form__amount-label">10-20</label>
+                    </li>
+                    <li class="toys-form__amount-item">
+                        <input id="max-amount-input" type="radio" class="toys-form__amount-input visually-hidden"
+                            value="20-50" name="amount">
+                        <label for="max-amount-input" class="toys-form__amount-label">20-50</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <button type="submit" class="toys-form__button button-style">Apply</button>
+        </form>
+        <section class="toys-catalog container">
+            <h2 class="visually-hidden sub-heading">Toys</h2>
+            <ul class="toys-catalog__list">
+                <li class="toys-catalog__item">
+                    <a href="#">
+                        <picture class="toys-catalog__img-wrapper">
+                            <source srcset="../../static/images/toys/toys1-2x.png 2x">
+                        <img src="../../static/images/toys/toys1.png" alt="image" class="toys-catalog__img" height="385" width="380">
+                        </picture>
+                        <div class="toys-catalog__more">
+                            <span class="toys-catalog__more-link">Learn more</span>
+                        </div>
+                        <div class="toys-catalog__offer">
+                            <h3 class="toys-catalog__offer-title">SHARKY BEAN BAG CHAIR COVER</h3>
+                            <p class="toys-catalog__offer-price">$60.00 USD</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="toys-catalog__item">
+                    <a href="#">
+                        <picture class="toys-catalog__img-wrapper">
+                            <source srcset="../../static/images/toys/toys2-2x.png 2x">
+                        <img src="../../static/images/toys/toys2.png" alt="image" class="toys-catalog__img" height="385" width="380">
+                    </picture>
+                        <div class="toys-catalog__more">
+                            <span class="toys-catalog__more-link">Learn more</span>
+                        </div>
+                        <div class="toys-catalog__offer">
+                            <h3 class="toys-catalog__offer-title">BRASS DECO FRAMES</h3>
+                            <p class="toys-catalog__offer-price">$66.00 USD</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="toys-catalog__item">
+                    <a href="#">
+                        <picture class="toys-catalog__img-wrapper">
+                            <source srcset="../../static/images/toys/toys3-2x.png 2x">
+                        <img src="../../static/images/toys/toys3.png" alt="image" class="toys-catalog__img" height="385" width="380">
+                    </picture>
+                        <div class="toys-catalog__more">
+                            <span class="toys-catalog__more-link">Learn more</span>
+                        </div>
+                        <div class="toys-catalog__offer">
+                            <h3 class="toys-catalog__offer-title">CIBO FULL APRON</h3>
+                            <p class="toys-catalog__offer-price">$60.00 USD</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="toys-catalog__item">
+                    <a href="#">
+                        <picture class="toys-catalog__img-wrapper">
+                            <source srcset="../../static/images/toys/toys4-2x.png 2x">
+                        <img src="../../static/images/toys/toys4.png" alt="image" class="toys-catalog__img" height="385" width="380">
+                    </picture>
+                        <div class="toys-catalog__more">
+                            <span class="toys-catalog__more-link">Learn more</span>
+                        </div>
+                        <div class="toys-catalog__offer">
+                            <h3 class="toys-catalog__offer-title">GATCHA GATCHA GUMBALL MACHINE</h3>
+                            <p class="toys-catalog__offer-price">$56.00 USD</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="toys-catalog__item">
+                    <a href="#">
+                        <picture class="toys-catalog__img-wrapper">
+                            <source srcset="../../static/images/toys/toys5-2x.png 2x">
+                        <img src="../../static/images/toys/toys5.png" alt="image" class="toys-catalog__img" height="385" width="380">
+                    </picture>
+                        <div class="toys-catalog__more">
+                            <span class="toys-catalog__more-link">Learn more</span>
+                        </div>
+                        <div class="toys-catalog__offer">
+                            <h3 class="toys-catalog__offer-title">CHRISTMAS ADVENT SCENTED CANDLE</h3>
+                            <p class="toys-catalog__offer-price">$29.00 USD</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="toys-catalog__item">
+                    <a href="#">
+                        <picture class="toys-catalog__img-wrapper">
+                            <source srcset="../../static/images/toys/toys6-2x.png 2x">
+                        <img src="../../static/images/toys/toys6.png" alt="image" class="toys-catalog__img" height="385" width="380">
+                    </picture>
+                        <div class="toys-catalog__more">
+                            <span class="toys-catalog__more-link">Learn more</span>
+                        </div>
+                        <div class="toys-catalog__offer">
+                            <h3 class="toys-catalog__offer-title">TANGLE SPINNING TEA LIGHT</h3>
+                            <p class="toys-catalog__offer-price">$56.00 USD</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </section>
-      </main>
+            @@include('control-button/index.html')
+    </main>
     @@include('footer/index.html')
-  </body>
+</body>
+
 </html>
